@@ -68,6 +68,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started: getting-started.md
-  - Build guide: build/index.md
+  - Build guide:
+      - build/index.md
+      - Connectors and wiring: build/connectors.md
   - Setup and calibration: setup/index.md
   - Firmware and release notes: firmware/index.md

@@ -30,20 +30,20 @@ tested version starts at [Wiring](#wiring).
 
 ## Wiring
 
-=== "Rev 4.01"
+Wire the modules to the controller as shown in
+[Connectors and wiring](connectors.md). It has the system diagrams, and a
+pin-out and wiring sketch for every connector.
 
-    Connect the PA sensor cable to J3.
+Suggested order:
 
-=== "Rev 4.02"
+1. 12 V supply ([J22](connectors.md#j22-j23-12-v-power-in)) and the display ([J18](connectors.md#j18-j19-display)).
+2. High Side Switch: sense ([J8](connectors.md#j8-j9-psu-monitor)) and control ([J10](connectors.md#j10-j11-psu-protection)).
+3. LPF module: power ([J39](connectors.md#j39-j40-lpf-module-power)) and band select ([J43 or J41](connectors.md#j41-j42-and-j43-j44-lpf-band-select)).
+4. SWR bridges ([J3, J5](connectors.md#j3-j4-and-j5-j6-swr-bridges)), NTCs ([J28](connectors.md#j28-j29-ntc-temperature-sensors)) and fan ([J20](connectors.md#j20-j21-fan)).
+5. PTT and RX/TX relay ([J26](connectors.md#j26-j27-ptt-and-rxtx-relay)), PA bias ([J30](connectors.md#j30-j31-pa-bias)).
+6. Radio band data ([J1](connectors.md#j1-j2-band-data-and-rf-sense) or [J16](connectors.md#j16-j17-cat-ci-v)), ALC ([J24](connectors.md#j24-j25-alc-and-tx-inhibit)), and the optional antenna selector and rotator.
 
-    Connect the PA sensor cable to J5.
-
-| Connector | Signal | Notes |
-| --- | --- | --- |
-| [J1] | [Supply in] | [voltage range] |
-| [J3 / J5] | PA sensor | See the revision tabs above |
-| [Jx] | Band data | Band voltage, BCD, CAT, CI-V or RF sense |
-| [Jx] | Rotator | Left / right relay outputs, position pot |
+[Connectors and wiring →](connectors.md){ .md-button }
 
 ## First power-up
 
