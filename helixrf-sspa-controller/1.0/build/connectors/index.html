@@ -1,0 +1,2657 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Build guide, setup and reference for the Helix SSPA Controller by HelixRF.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.helixrf.com/helixrf-sspa-controller/1.0/build/connectors/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../setup/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon-96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Connectors and wiring - Helix SSPA Controller</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/helixrf.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connectors-and-wiring" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-header__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-dark-bg.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Helix SSPA Controller
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Connectors and wiring
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/s21rc/helixrf-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Build guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup and calibration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../firmware/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Firmware and release notes
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-nav__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-dark-bg.png" alt="logo">
+
+    </a>
+    Helix SSPA Controller
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/s21rc/helixrf-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build guide
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectors and wiring
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectors and wiring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connector index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j22-j23-12-v-power-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J22 / J23 · 12 V power in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j39-j40-lpf-module-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J39 / J40 · LPF module power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j8-j9-psu-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J8 / J9 · PSU monitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j10-j11-psu-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J10 / J11 · PSU protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j30-j31-pa-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J30 / J31 · PA bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rf-sensing-and-thermal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RF sensing and thermal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RF sensing and thermal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j3-j4-and-j5-j6-swr-bridges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J3 / J4 and J5 / J6 · SWR bridges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j28-j29-ntc-temperature-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J28 / J29 · NTC temperature sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j20-j21-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J20 / J21 · Fan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#band-and-antenna-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Band and antenna switching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Band and antenna switching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j41-j42-and-j43-j44-lpf-band-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J41 / J42 and J43 / J44 · LPF band select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j45-j46-antenna-selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J45 / J46 · Antenna selector
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radio interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j26-j27-ptt-and-rxtx-relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J26 / J27 · PTT and RX/TX relay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j24-j25-alc-and-tx-inhibit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J24 / J25 · ALC and TX inhibit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j1-j2-band-data-and-rf-sense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J1 / J2 · Band data and RF sense
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j16-j17-cat-ci-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J16 / J17 · CAT / CI-V
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-and-accessories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display and accessories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Display and accessories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j18-j19-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J18 / J19 · Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j32-j33-rotator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J32 / J33 · Rotator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j34-usb-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J34 · USB-C
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-and-service-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expansion and service connectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup and calibration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware and release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connector-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connector index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j22-j23-12-v-power-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J22 / J23 · 12 V power in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j39-j40-lpf-module-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J39 / J40 · LPF module power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j8-j9-psu-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J8 / J9 · PSU monitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j10-j11-psu-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J10 / J11 · PSU protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j30-j31-pa-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J30 / J31 · PA bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rf-sensing-and-thermal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RF sensing and thermal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RF sensing and thermal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j3-j4-and-j5-j6-swr-bridges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J3 / J4 and J5 / J6 · SWR bridges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j28-j29-ntc-temperature-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J28 / J29 · NTC temperature sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j20-j21-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J20 / J21 · Fan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#band-and-antenna-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Band and antenna switching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Band and antenna switching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j41-j42-and-j43-j44-lpf-band-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J41 / J42 and J43 / J44 · LPF band select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j45-j46-antenna-selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J45 / J46 · Antenna selector
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radio interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j26-j27-ptt-and-rxtx-relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J26 / J27 · PTT and RX/TX relay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j24-j25-alc-and-tx-inhibit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J24 / J25 · ALC and TX inhibit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j1-j2-band-data-and-rf-sense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J1 / J2 · Band data and RF sense
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j16-j17-cat-ci-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J16 / J17 · CAT / CI-V
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-and-accessories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display and accessories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Display and accessories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j18-j19-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J18 / J19 · Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j32-j33-rotator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J32 / J33 · Rotator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j34-usb-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        J34 · USB-C
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion-and-service-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expansion and service connectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="connectors-and-wiring">Connectors and wiring<a class="headerlink" href="#connectors-and-wiring" title="Permanent link">&para;</a></h1>
+<p>Every connector on the controller board, what it does, its pin-out and how to
+wire it. Pin numbers follow the board silkscreen; pin 1 is GND on almost
+every connector.</p>
+<div class="admonition danger">
+<p class="admonition-title">RF safety</p>
+<p>High RF power. Never operate without a proper load or antenna connected.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Two footprints per connector</p>
+<p>Most connectors appear twice on the board under two reference numbers, for
+example <strong>J3 / J4</strong>. The first is a <strong>JST PH (2.0 mm) side-entry socket</strong>,
+the second is a row of <strong>solder pads</strong> wired in parallel. Use whichever
+suits your build: a crimped JST PH lead, or wires soldered straight to the
+pads. Never use both at once.</p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The four diagrams below show the whole system. The sections after them cover
+each connector in detail.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Control harness</label><label for="__tabbed_1_2">Power</label><label for="__tabbed_1_3">RF path</label><label for="__tabbed_1_4">Other I/O</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Control harness: controller to modules" loading="lazy" src="../../assets/wiring/control-harness.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Power wiring: 52 V and 12 V" loading="lazy" src="../../assets/wiring/power-wiring.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="RF signal path: coax routing" loading="lazy" src="../../assets/wiring/rf-signal-path.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Other connectors: external I/O" loading="lazy" src="../../assets/wiring/other-connectors.png" /></p>
+</div>
+</div>
+</div>
+<h3 id="connector-index">Connector index<a class="headerlink" href="#connector-index" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Name on board</th>
+<th>Connects to</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J22 / J23</td>
+<td>12V</td>
+<td>12 V logic supply</td>
+<td><a href="#j22-j23-12-v-power-in">Power in</a></td>
+</tr>
+<tr>
+<td>J39 / J40</td>
+<td>LPF PWR</td>
+<td>LPF module supply</td>
+<td><a href="#j39-j40-lpf-module-power">LPF power</a></td>
+</tr>
+<tr>
+<td>J8 / J9</td>
+<td>PSU-MON</td>
+<td>High Side Switch, voltage and current sense</td>
+<td><a href="#j8-j9-psu-monitor">PSU monitor</a></td>
+</tr>
+<tr>
+<td>J10 / J11</td>
+<td>PSU-PROT</td>
+<td>High Side Switch, on/off control</td>
+<td><a href="#j10-j11-psu-protection">PSU protection</a></td>
+</tr>
+<tr>
+<td>J30 / J31</td>
+<td>BIAS</td>
+<td>RF pallet bias</td>
+<td><a href="#j30-j31-pa-bias">PA bias</a></td>
+</tr>
+<tr>
+<td>J3 / J4</td>
+<td>ANT SWR</td>
+<td>Antenna-side SWR bridge</td>
+<td><a href="#j3-j4-and-j5-j6-swr-bridges">SWR bridges</a></td>
+</tr>
+<tr>
+<td>J5 / J6</td>
+<td>LPF SWR</td>
+<td>PA-side (LPF) SWR bridge</td>
+<td><a href="#j3-j4-and-j5-j6-swr-bridges">SWR bridges</a></td>
+</tr>
+<tr>
+<td>J28 / J29</td>
+<td>NTC</td>
+<td>Two temperature sensors</td>
+<td><a href="#j28-j29-ntc-temperature-sensors">Temperature</a></td>
+</tr>
+<tr>
+<td>J20 / J21</td>
+<td>FAN</td>
+<td>Cooling fan</td>
+<td><a href="#j20-j21-fan">Fan</a></td>
+</tr>
+<tr>
+<td>J41 / J42, J43 / J44</td>
+<td>~LPF, LPF</td>
+<td>LPF band relays</td>
+<td><a href="#j41-j42-and-j43-j44-lpf-band-select">LPF band select</a></td>
+</tr>
+<tr>
+<td>J45 / J46</td>
+<td>ANT</td>
+<td>Antenna selector relays</td>
+<td><a href="#j45-j46-antenna-selector">Antenna selector</a></td>
+</tr>
+<tr>
+<td>J26 / J27</td>
+<td>PTT</td>
+<td>Radio PTT in, RX/TX relay out</td>
+<td><a href="#j26-j27-ptt-and-rxtx-relay">PTT and RX/TX relay</a></td>
+</tr>
+<tr>
+<td>J24 / J25</td>
+<td>ALC</td>
+<td>Radio ALC and TX inhibit</td>
+<td><a href="#j24-j25-alc-and-tx-inhibit">ALC and TX inhibit</a></td>
+</tr>
+<tr>
+<td>J1 / J2</td>
+<td>BAND SELECT</td>
+<td>Radio band data, RF sense</td>
+<td><a href="#j1-j2-band-data-and-rf-sense">Band data</a></td>
+</tr>
+<tr>
+<td>J16 / J17</td>
+<td>CAT</td>
+<td>CAT / CI-V module</td>
+<td><a href="#j16-j17-cat-ci-v">CAT</a></td>
+</tr>
+<tr>
+<td>J18 / J19</td>
+<td>3V3 UART1</td>
+<td>Touch display</td>
+<td><a href="#j18-j19-display">Display</a></td>
+</tr>
+<tr>
+<td>J32 / J33</td>
+<td>ROT</td>
+<td>Antenna rotator</td>
+<td><a href="#j32-j33-rotator">Rotator</a></td>
+</tr>
+<tr>
+<td>J34</td>
+<td>USB-C</td>
+<td>PC (service)</td>
+<td><a href="#j34-usb-c">USB</a></td>
+</tr>
+<tr>
+<td>J14 / J15</td>
+<td>FREQ-CNT</td>
+<td>Frequency counter / drive protection</td>
+<td><a href="#expansion-and-service-connectors">Expansion</a></td>
+</tr>
+<tr>
+<td>J12 / J13</td>
+<td>I2C</td>
+<td>Expansion</td>
+<td><a href="#expansion-and-service-connectors">Expansion</a></td>
+</tr>
+<tr>
+<td>J35 / J36</td>
+<td>NEURAL</td>
+<td>Expansion UART</td>
+<td><a href="#expansion-and-service-connectors">Expansion</a></td>
+</tr>
+<tr>
+<td>J37 / J38</td>
+<td>OTA</td>
+<td>Firmware update lines</td>
+<td><a href="#expansion-and-service-connectors">Expansion</a></td>
+</tr>
+<tr>
+<td>J7</td>
+<td>SWD</td>
+<td>Programmer / debugger</td>
+<td><a href="#expansion-and-service-connectors">Expansion</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="power">Power<a class="headerlink" href="#power" title="Permanent link">&para;</a></h2>
+<h3 id="j22-j23-12-v-power-in">J22 / J23 · 12 V power in<a class="headerlink" href="#j22-j23-12-v-power-in" title="Permanent link">&para;</a></h3>
+<p>The 12 V logic supply for the controller, the display, the fan and all relay
+outputs. It is fused on the board (F1, resettable).</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>+12 V</td>
+<td>In</td>
+<td>[TODO: input range and current needed with all relays on]</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> 12 V supply                       Controller J22
+ ┌─────────┐                       ┌──────────┐
+ │    +12V ├───────────────────────┤ 2  +12V  │
+ │     GND ├───────────────────────┤ 1  GND   │
+ └─────────┘                       └──────────┘
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The 52 V PA supply never goes to the controller board. It runs through the
+High Side Switch module (see <a href="#overview">Power</a> diagram).</p>
+</div>
+<h3 id="j39-j40-lpf-module-power">J39 / J40 · LPF module power<a class="headerlink" href="#j39-j40-lpf-module-power" title="Permanent link">&para;</a></h3>
+<p>Supplies 12 V to the LPF relay board. Two pins per rail share the current.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 2</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>3, 4</td>
+<td>+12 V</td>
+<td>Out</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> Controller J39                     LPF module
+ ┌──────────┐                      ┌──────────┐
+ │ 3,4 +12V ├──────────────────────┤ +12V     │
+ │ 1,2 GND  ├──────────────────────┤ GND      │
+ └──────────┘                      └──────────┘
+</code></pre></div>
+<h3 id="j8-j9-psu-monitor">J8 / J9 · PSU monitor<a class="headerlink" href="#j8-j9-psu-monitor" title="Permanent link">&para;</a></h3>
+<p>Voltage and current readings from the High Side Switch module, shown on the
+display and used by the protection. Pin 4 powers the sensor.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>V_SENSE</td>
+<td>In</td>
+<td>PA supply voltage, scaled by the module</td>
+</tr>
+<tr>
+<td>3</td>
+<td>I_SENSE</td>
+<td>In</td>
+<td>PA current: shunt amplifier, Hall sensor or BTS current-sense output</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+3.3 V</td>
+<td>Out</td>
+<td>Supply for the sensor</td>
+</tr>
+</tbody>
+</table>
+<p>The sensor type (shunt, Hall or BTS) and its values are set on the display.
+See <a href="../../setup/">Setup and calibration</a>.</p>
+<div class="highlight"><pre><span></span><code> Controller J8                      High Side Switch (sense)
+ ┌───────────────┐                 ┌─────────────────┐
+ │ 4  +3.3V      ├─────────────────┤ sensor supply   │
+ │ 3  I_SENSE    │◄────────────────┤ current out     │
+ │ 2  V_SENSE    │◄────────────────┤ voltage out     │
+ │ 1  GND        ├─────────────────┤ GND             │
+ └───────────────┘                 └─────────────────┘
+</code></pre></div>
+<h3 id="j10-j11-psu-protection">J10 / J11 · PSU protection<a class="headerlink" href="#j10-j11-psu-protection" title="Permanent link">&para;</a></h3>
+<p>Turns the 52 V PA supply off when the hardware protection latches a fault.
+Both polarities are provided, so the switch module can use whichever its gate
+driver needs.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>~PROT-VCC</td>
+<td>Out</td>
+<td>Fault output, inverted sense</td>
+</tr>
+<tr>
+<td>3</td>
+<td>PROT-VCC</td>
+<td>Out</td>
+<td>Fault output</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+3.3 V</td>
+<td>Out</td>
+<td>Supply for the switch logic</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: state the active level of each pin (switched to GND on fault?) and which one the HelixRF High Side Switch uses.]</p>
+<div class="highlight"><pre><span></span><code> Controller J10                     High Side Switch (control)
+ ┌───────────────┐                 ┌─────────────────┐
+ │ 4  +3.3V      ├─────────────────┤ logic supply    │
+ │ 3  PROT-VCC   ├────────────────►│ enable / kill   │
+ │ 2  ~PROT-VCC  ├────────────────►│ (use one)       │
+ │ 1  GND        ├─────────────────┤ GND             │
+ └───────────────┘                 └─────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="pa">PA<a class="headerlink" href="#pa" title="Permanent link">&para;</a></h2>
+<h3 id="j30-j31-pa-bias">J30 / J31 · PA bias<a class="headerlink" href="#j30-j31-pa-bias" title="Permanent link">&para;</a></h3>
+<p>Switches the pallet's gate bias. The controller applies bias only while
+transmitting, after the RX/TX relay has settled (20 ms), and removes it
+before the relay returns to receive. A protection fault removes it at once.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>BIAS-IN</td>
+<td>In</td>
+<td>Bias supply from the pallet</td>
+</tr>
+<tr>
+<td>3</td>
+<td>BIAS-OUT</td>
+<td>Out</td>
+<td>Switched bias back to the pallet's gate-bias input</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gate kill (optional)</td>
+<td>Out</td>
+<td>Pulls the gate to GND on a fault</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+12 V</td>
+<td>Out</td>
+<td>Supply for an external pinch-off circuit</td>
+</tr>
+<tr>
+<td>6</td>
+<td>−12 V</td>
+<td>Out</td>
+<td>Supply for an external pinch-off circuit</td>
+</tr>
+<tr>
+<td>7</td>
+<td>PINCH</td>
+<td>Out</td>
+<td>Protection-latch signal for a pinch-off circuit</td>
+</tr>
+<tr>
+<td>8</td>
+<td>BIAS_CTRL</td>
+<td>Out</td>
+<td>Logic high while transmitting, for pallets with a bias-enable input</td>
+</tr>
+</tbody>
+</table>
+<p>Most LDMOS pallets need only pins 1–3. Pins 4–8 are for pallets that need a
+hard gate kill, a negative pinch-off voltage or a separate bias-enable signal.
+[TODO: wiring notes for the pallets you support.]</p>
+<div class="highlight"><pre><span></span><code> Controller J30                     RF pallet
+ ┌───────────────┐                 ┌──────────────────┐
+ │ 2  BIAS-IN    │◄────────────────┤ bias supply out  │
+ │ 3  BIAS-OUT   ├────────────────►│ gate bias in     │
+ │ 4  Gate kill  ├ ─ ─ ─ ─ ─ ─ ─ ─►│ gate (optional)  │
+ │ 8  BIAS_CTRL  ├ ─ ─ ─ ─ ─ ─ ─ ─►│ bias enable (opt)│
+ │ 1  GND        ├─────────────────┤ GND              │
+ └───────────────┘                 └──────────────────┘
+       ─── required    ─ ─ optional
+</code></pre></div>
+<hr />
+<h2 id="rf-sensing-and-thermal">RF sensing and thermal<a class="headerlink" href="#rf-sensing-and-thermal" title="Permanent link">&para;</a></h2>
+<h3 id="j3-j4-and-j5-j6-swr-bridges">J3 / J4 and J5 / J6 · SWR bridges<a class="headerlink" href="#j3-j4-and-j5-j6-swr-bridges" title="Permanent link">&para;</a></h3>
+<p>DC outputs from the two directional couplers. <strong>J3 / J4</strong> reads the bridge
+on the antenna side (after the LPF). <strong>J5 / J6</strong> reads the bridge between
+the PA and the LPF, which catches a wrong or failed filter. Both feed the
+power meter and the hardware SWR trip.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Reflected (ANT-R / LPF-R)</td>
+<td>In</td>
+<td>DC from the reflected detector</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Forward (ANT-F / LPF-F)</td>
+<td>In</td>
+<td>DC from the forward detector</td>
+</tr>
+</tbody>
+</table>
+<p>Use shielded cable or a twisted pair per signal, and keep it away from the
+PA output coax.</p>
+<div class="highlight"><pre><span></span><code> SWR bridge                         Controller J3 (antenna) / J5 (LPF)
+ ┌──────────────┐                  ┌──────────────┐
+ │ FWD detector ├─────────────────►│ 4  FWD       │
+ │          GND ├──────────────────┤ 3  GND       │
+ │ REF detector ├─────────────────►│ 2  REF       │
+ │          GND ├──────────────────┤ 1  GND       │
+ └──────────────┘                  └──────────────┘
+</code></pre></div>
+<p>Calibrate both bridges after wiring; see
+<a href="../../setup/#power-calibration">Power calibration</a>.</p>
+<h3 id="j28-j29-ntc-temperature-sensors">J28 / J29 · NTC temperature sensors<a class="headerlink" href="#j28-j29-ntc-temperature-sensors" title="Permanent link">&para;</a></h3>
+<p>Two NTC thermistors, for example one on the pallet heatsink and one on the
+LPF or the PSU. The fan speed and the over-temperature trip follow whichever
+reads higher. Each NTC sits between +3.3 V and its sense pin; the board has a
+10 kΩ resistor from each sense pin to GND.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+3.3 V</td>
+<td>Out</td>
+<td>NTC 1 supply</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NTC-1</td>
+<td>In</td>
+<td>NTC 1 sense</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+3.3 V</td>
+<td>Out</td>
+<td>NTC 2 supply</td>
+</tr>
+<tr>
+<td>4</td>
+<td>NTC-2</td>
+<td>In</td>
+<td>NTC 2 sense</td>
+</tr>
+</tbody>
+</table>
+<p>Use 10 kΩ NTCs [TODO: confirm recommended NTC value and beta]. Enter each
+NTC's resistance and beta on the display.</p>
+<div class="highlight"><pre><span></span><code> Controller J28
+ ┌──────────────┐        NTC 1 (heatsink)
+ │ 1  +3.3V     ├────────/\/\/\────┐
+ │ 2  NTC-1     ├──────────────────┘
+ │              │        NTC 2
+ │ 3  +3.3V     ├────────/\/\/\────┐
+ │ 4  NTC-2     ├──────────────────┘
+ └──────────────┘
+</code></pre></div>
+<h3 id="j20-j21-fan">J20 / J21 · Fan<a class="headerlink" href="#j20-j21-fan" title="Permanent link">&para;</a></h3>
+<p>Variable fan speed. The speed ramps from 10 % at the "fan low" temperature to
+100 % at "fan high"; the fan never stops completely. Two-wire fans are
+switched on their negative lead; four-wire PC fans take the PWM signal.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>PWM</td>
+<td>Out</td>
+<td>PWM control for 4-wire fans</td>
+</tr>
+<tr>
+<td>3</td>
+<td>FAN −</td>
+<td>Out</td>
+<td>Switched negative for 2-wire fans</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+12 V</td>
+<td>Out</td>
+<td>Fan supply (filtered)</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">2-wire fan</label><label for="__tabbed_2_2">4-wire PC fan</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Controller J20                 Fan
+ ┌──────────────┐              ┌──────────┐
+ │ 4  +12V      ├──────────────┤ + (red)  │
+ │ 3  FAN −     ├──────────────┤ − (black)│
+ └──────────────┘              └──────────┘
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Controller J20                 Fan
+ ┌──────────────┐              ┌──────────────┐
+ │ 4  +12V      ├──────────────┤ +12V (yellow)│
+ │ 1  GND       ├──────────────┤ GND  (black) │
+ │ 2  PWM       ├──────────────┤ PWM  (blue)  │
+ └──────────────┘              └──────────────┘
+   (tach wire not used)
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>If the fan runs backwards to the temperature (fast when cold), turn on
+<strong>PWM invert</strong> on the display.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Rev 4.01</label><label for="__tabbed_3_2">Rev 4.02</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>As above.</p>
+</div>
+<div class="tabbed-block">
+<p>[TODO: Rev 4.02 adds GND and raw PWM pins to the fan connector. Add the new pin-out.]</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="band-and-antenna-switching">Band and antenna switching<a class="headerlink" href="#band-and-antenna-switching" title="Permanent link">&para;</a></h2>
+<h3 id="j41-j42-and-j43-j44-lpf-band-select">J41 / J42 and J43 / J44 · LPF band select<a class="headerlink" href="#j41-j42-and-j43-j44-lpf-band-select" title="Permanent link">&para;</a></h3>
+<p>Eight band outputs to the LPF relay board, one per filter bank. Exactly one
+output is on at a time. Which bank each band uses is set in the LPF map on
+the display. The outputs are given twice, so you can use whichever matches
+your relay board:</p>
+<ul>
+<li><strong>J43 / J44 (LPF): sourcing.</strong> The active pin goes to +12 V. Wire each relay
+  coil between the pin and GND.</li>
+<li><strong>J41 / J42 (~LPF): sinking.</strong> The active pin goes to GND (open collector).
+  Wire each relay coil between +12 V and the pin.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>J43 / J44 (sourcing)</th>
+<th>J41 / J42 (sinking)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BAND1</td>
+<td>~BAND1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BAND2</td>
+<td>~BAND2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>BAND3</td>
+<td>~BAND3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BAND4</td>
+<td>~BAND4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>BAND5</td>
+<td>~BAND5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>BAND6</td>
+<td>~BAND6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>BAND7</td>
+<td>~BAND7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>BAND8</td>
+<td>~BAND8</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: maximum current per output.]</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Sourcing (J43)</label><label for="__tabbed_4_2">Sinking (J41)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Controller J43                 LPF module (one bank shown)
+ ┌──────────────┐              ┌────────────────────────┐
+ │ 1  BAND1     ├─────────────►│ relay coil ──┐         │
+ │ …            │              │              GND       │
+ │ 8  BAND8     ├─────────────►│ (one per bank)         │
+ └──────────────┘              └────────────────────────┘
+ Power the LPF board from J39 (+12 V and GND).
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Controller J41                 LPF module (one bank shown)
+ ┌──────────────┐              ┌────────────────────────┐
+ │ 1  ~BAND1    ├──────────────┤ relay coil ── +12V     │
+ │ …            │              │                        │
+ │ 8  ~BAND8    ├──────────────┤ (one per bank)         │
+ └──────────────┘              └────────────────────────┘
+ Relay +12 V comes from J39.
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="j45-j46-antenna-selector">J45 / J46 · Antenna selector<a class="headerlink" href="#j45-j46-antenna-selector" title="Permanent link">&para;</a></h3>
+<p>Drives the optional 4-way antenna selector and a separate receive-antenna
+relay. All outputs are sourcing (+12 V when on). The TX antenna is chosen per
+band on the display and never changes while transmitting.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ANT1</td>
+<td>TX antenna relay 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ANT2</td>
+<td>TX antenna relay 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ANT3</td>
+<td>TX antenna relay 3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ANT4</td>
+<td>Dedicated RX antenna relay</td>
+</tr>
+<tr>
+<td>5–8</td>
+<td>EX1–EX4</td>
+<td>Spare outputs [TODO: describe use]</td>
+</tr>
+</tbody>
+</table>
+<p>The TX antenna relays use a cumulative code, so a cascade of three
+changeover relays selects four antennas:</p>
+<table>
+<thead>
+<tr>
+<th>Antenna</th>
+<th>ANT1</th>
+<th>ANT2</th>
+<th>ANT3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANT 1 (default, no relay on)</td>
+<td>off</td>
+<td>off</td>
+<td>off</td>
+</tr>
+<tr>
+<td>ANT 2</td>
+<td><strong>on</strong></td>
+<td>off</td>
+<td>off</td>
+</tr>
+<tr>
+<td>ANT 3</td>
+<td><strong>on</strong></td>
+<td><strong>on</strong></td>
+<td>off</td>
+</tr>
+<tr>
+<td>ANT 4</td>
+<td><strong>on</strong></td>
+<td><strong>on</strong></td>
+<td><strong>on</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> Controller J45                     Antenna selector board
+ ┌──────────────┐                  ┌─────────────────────────┐
+ │ 1  ANT1      ├─────────────────►│ K1 coil ─┐              │
+ │ 2  ANT2      ├─────────────────►│ K2 coil ─┤  coils to    │
+ │ 3  ANT3      ├─────────────────►│ K3 coil ─┤  GND         │
+ │ 4  ANT4 (RX) ├─────────────────►│ RX relay─┘              │
+ └──────────────┘                  └─────────────────────────┘
+</code></pre></div>
+<p>[TODO: GND and +12 V for the selector board. J45 has no GND pin; take GND from the chassis or J39.]</p>
+<hr />
+<h2 id="radio-interface">Radio interface<a class="headerlink" href="#radio-interface" title="Permanent link">&para;</a></h2>
+<h3 id="j26-j27-ptt-and-rxtx-relay">J26 / J27 · PTT and RX/TX relay<a class="headerlink" href="#j26-j27-ptt-and-rxtx-relay" title="Permanent link">&para;</a></h3>
+<p>Keying input from the radio and the drive for the RX/TX changeover relay. The
+controller sequences the relay and the bias so the relay never switches with
+RF present.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>~PTT</td>
+<td>In</td>
+<td>Active low: radio's TX-GND / SEND output pulls it to GND</td>
+</tr>
+<tr>
+<td>3</td>
+<td>nRST-RLY</td>
+<td>Out</td>
+<td>Switched to GND (open drain) [TODO: describe use]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>RX/TX RLY</td>
+<td>Out</td>
+<td>+12 V while transmitting; flyback diode on board</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> Radio                Controller J26              RX/TX relay
+ ┌──────────┐        ┌──────────────┐            ┌──────────┐
+ │ SEND/PTT ├───────►│ 2  ~PTT      │            │          │
+ │      GND ├────────┤ 1  GND       ├────────────┤ coil −   │
+ └──────────┘        │ 4  RX/TX RLY ├───────────►│ coil +   │
+                     └──────────────┘            └──────────┘
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Test before going on the air</p>
+<p>Check that the relay changes over on PTT with no RF applied, before you
+connect the drive cable.</p>
+</div>
+<h3 id="j24-j25-alc-and-tx-inhibit">J24 / J25 · ALC and TX inhibit<a class="headerlink" href="#j24-j25-alc-and-tx-inhibit" title="Permanent link">&para;</a></h3>
+<p>ALC feedback to the radio, and a TX-inhibit line that stops the radio from
+transmitting while a protection fault is latched.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>ALC (4 V range)</td>
+<td>Out</td>
+<td>[TODO: confirm range and polarity]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ALC (10 V range)</td>
+<td>Out</td>
+<td>[TODO: confirm range and polarity]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TX-INH</td>
+<td>Out</td>
+<td>Switched to GND (open drain) on a fault</td>
+</tr>
+</tbody>
+</table>
+<p>Use the ALC pin that matches your radio's ALC input range.</p>
+<div class="highlight"><pre><span></span><code> Controller J24                     Radio
+ ┌──────────────┐                  ┌───────────────┐
+ │ 2 or 3  ALC  ├─────────────────►│ ALC in        │
+ │ 4  TX-INH    ├─────────────────►│ TX inhibit in │
+ │ 1  GND       ├──────────────────┤ GND           │
+ └──────────────┘                  └───────────────┘
+</code></pre></div>
+<h3 id="j1-j2-band-data-and-rf-sense">J1 / J2 · Band data and RF sense<a class="headerlink" href="#j1-j2-band-data-and-rf-sense" title="Permanent link">&para;</a></h3>
+<p>Band information from the radio, by band voltage (Yaesu style), BCD, or an RF
+sense module. Choose the method and the radio profile on the display. CAT
+and CI-V use the <a href="#j16-j17-cat-ci-v">CAT connector</a> instead.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>BCD A</td>
+<td>In</td>
+<td>LSB</td>
+</tr>
+<tr>
+<td>3</td>
+<td>BCD B</td>
+<td>In</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>BCD C</td>
+<td>In</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>BCD D</td>
+<td>In</td>
+<td>MSB</td>
+</tr>
+<tr>
+<td>6</td>
+<td>BAND-V</td>
+<td>In</td>
+<td>Band voltage, read up to about 14 V</td>
+</tr>
+<tr>
+<td>7</td>
+<td>RF-SENSE</td>
+<td>In</td>
+<td>From the RF sense module</td>
+</tr>
+<tr>
+<td>8</td>
+<td>+5 V</td>
+<td>Out</td>
+<td>Supply for an RF sense module or band decoder</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Band voltage</label><label for="__tabbed_5_2">BCD</label><label for="__tabbed_5_3">RF sense</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Radio (BAND DATA)              Controller J1
+ ┌───────────────┐             ┌──────────────┐
+ │ BAND voltage  ├────────────►│ 6  BAND-V    │
+ │ GND           ├─────────────┤ 1  GND       │
+ └───────────────┘             └──────────────┘
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Radio (BAND DATA)              Controller J1
+ ┌───────────────┐             ┌──────────────┐
+ │ BAND A        ├────────────►│ 2  BCD A     │
+ │ BAND B        ├────────────►│ 3  BCD B     │
+ │ BAND C        ├────────────►│ 4  BCD C     │
+ │ BAND D        ├────────────►│ 5  BCD D     │
+ │ GND           ├─────────────┤ 1  GND       │
+ └───────────────┘             └──────────────┘
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> RF sense module                Controller J1
+ ┌───────────────┐             ┌──────────────┐
+ │ +5V in        │◄────────────┤ 8  +5V       │
+ │ sense out     ├────────────►│ 7  RF-SENSE  │
+ │ GND           ├─────────────┤ 1  GND       │
+ └───────────────┘             └──────────────┘
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="j16-j17-cat-ci-v">J16 / J17 · CAT / CI-V<a class="headerlink" href="#j16-j17-cat-ci-v" title="Permanent link">&para;</a></h3>
+<p>Serial link to the radio for automatic band switching by CAT (two-wire serial)
+or Icom CI-V (single wire). Logic level is 5 V or 3.3 V, set by solder jumper
+<strong>JP2</strong>. Pin 4 powers a level converter (RS-232 or USB) if you use one.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>CAT-RX</td>
+<td>In</td>
+<td>Data from the radio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CAT-TX</td>
+<td>Out</td>
+<td>Data to the radio; the CI-V line in CI-V mode [TODO: confirm]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+5 V</td>
+<td>Out</td>
+<td>Supply for the CAT module</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">CAT (TTL)</label><label for="__tabbed_6_2">Icom CI-V</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Radio / CAT module             Controller J16
+ ┌───────────────┐             ┌──────────────┐
+ │ TXD           ├────────────►│ 2  CAT-RX    │
+ │ RXD           │◄────────────┤ 3  CAT-TX    │
+ │ GND           ├─────────────┤ 1  GND       │
+ └───────────────┘             └──────────────┘
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code> Radio (CI-V jack)              Controller J16
+ ┌───────────────┐             ┌──────────────┐
+ │ tip (CI-V)    ├─────────────┤ 3  CAT-TX    │
+ │ sleeve (GND)  ├─────────────┤ 1  GND       │
+ └───────────────┘             └──────────────┘
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Most radios' RS-232 ports use ±12 V levels. Do not connect them directly:
+use a level converter powered from pin 4.</p>
+</div>
+<hr />
+<h2 id="display-and-accessories">Display and accessories<a class="headerlink" href="#display-and-accessories" title="Permanent link">&para;</a></h2>
+<h3 id="j18-j19-display">J18 / J19 · Display<a class="headerlink" href="#j18-j19-display" title="Permanent link">&para;</a></h3>
+<p>Power and the serial link to the ESP32-P4 touch display. The display also
+passes firmware updates to the controller over this link.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>RX</td>
+<td>In</td>
+<td>3.3 V UART, from display TX</td>
+</tr>
+<tr>
+<td>3</td>
+<td>TX</td>
+<td>Out</td>
+<td>3.3 V UART, to display RX</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+5 V</td>
+<td>Out</td>
+<td>Display supply</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> Controller J18                     Display
+ ┌──────────────┐                  ┌──────────────┐
+ │ 4  +5V       ├─────────────────►│ +5V          │
+ │ 3  TX        ├─────────────────►│ RX           │
+ │ 2  RX        │◄─────────────────┤ TX           │
+ │ 1  GND       ├──────────────────┤ GND          │
+ └──────────────┘                  └──────────────┘
+</code></pre></div>
+<p>The display's own CAN port connects to the PSU CAN connector, where fitted
+(see the "Other I/O" diagram).</p>
+<h3 id="j32-j33-rotator">J32 / J33 · Rotator<a class="headerlink" href="#j32-j33-rotator" title="Permanent link">&para;</a></h3>
+<p>Antenna rotator control: two relay outputs and the position potentiometer.
+Supports 360° and 450° rotators with 3-point calibration.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal (board label)</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>ROT-V</td>
+<td>In</td>
+<td>Position pot wiper</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ROT-L</td>
+<td>Out</td>
+<td>Relay driver, switched to GND</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ROT-R</td>
+<td>Out</td>
+<td>Relay driver, switched to GND</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: check rotation direction. In the schematic, pin 3 (ROT-L) is driven by the output the firmware calls CW (ROT-R), and pin 4 by CCW. Confirm on a real rotator and fix the labels.]
+[TODO: the pot needs a reference voltage from the rotator control box; give the maximum voltage allowed on ROT-V.]</p>
+<div class="highlight"><pre><span></span><code> Controller J32                     Rotator control box
+ ┌──────────────┐                  ┌───────────────────────┐
+ │ 3  ROT-L     ├──────────────────┤ relay A coil ── +V    │
+ │ 4  ROT-R     ├──────────────────┤ relay B coil ── +V    │
+ │ 2  ROT-V     │◄─────────────────┤ pot wiper             │
+ │ 1  GND       ├──────────────────┤ GND / pot low end     │
+ └──────────────┘                  └───────────────────────┘
+</code></pre></div>
+<h3 id="j34-usb-c">J34 · USB-C<a class="headerlink" href="#j34-usb-c" title="Permanent link">&para;</a></h3>
+<p>USB 2.0 device port on the controller. [TODO: what owners use it for (service log, firmware recovery?).]</p>
+<hr />
+<h2 id="expansion-and-service-connectors">Expansion and service connectors<a class="headerlink" href="#expansion-and-service-connectors" title="Permanent link">&para;</a></h2>
+<p>These connectors are not needed for a normal build.</p>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Name</th>
+<th>Pins</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J14 / J15</td>
+<td>FREQ-CNT</td>
+<td>1 GND · 2 LVDS+ · 3 LVDS− · 4 PROT-DRIVE (in)</td>
+<td>Frequency counter input (LVDS) and an external drive-overload fault input</td>
+</tr>
+<tr>
+<td>J12 / J13</td>
+<td>I2C</td>
+<td>1 GND · 2 SCL · 3 SDA · 4 +3.3 V</td>
+<td>Expansion, on the same bus as the settings EEPROM</td>
+</tr>
+<tr>
+<td>J35 / J36</td>
+<td>NEURAL</td>
+<td>1 GND · 2 RX · 3 TX · 4 +5 V</td>
+<td>Expansion UART (3.3 V)</td>
+</tr>
+<tr>
+<td>J37 / J38</td>
+<td>OTA</td>
+<td>1 GND · 2 EXT-IO1 · 3 BOOT0 · 4 nRST</td>
+<td>Firmware recovery lines [TODO: when this cable is needed]</td>
+</tr>
+<tr>
+<td>J7</td>
+<td>SWD</td>
+<td>1 +3.3 V · 2 SWDIO · 3 GND · 4 SWCLK · 5 SWO · 6 nRST</td>
+<td>STM32 programmer / debugger (2×3, 2.54 mm)</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: say which of these are reserved for future HelixRF modules.]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Build guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Build guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup and calibration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setup and calibration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © HELIXRF LLC · <a href="https://helixrf.com/privacy-policy/">Privacy</a> · <a href="https://helixrf.com/legal-notice/">Legal notice</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://helixrf.com/shop/" target="_blank" rel="noopener" title="HelixRF shop" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.06 3c-.43 0-.84.14-1.22.42s-.6.64-.7 1.08L2.11 8.91c-.25 1.09-.05 2.04.61 2.86l.28.28V19c0 .5.2 1 .61 1.39S4.5 21 5 21h14c.5 0 1-.2 1.39-.61S21 19.5 21 19v-6.95l.28-.28c.66-.82.86-1.77.61-2.86L20.86 4.5c-.13-.44-.36-.8-.73-1.08A1.88 1.88 0 0 0 18.94 3zm13.83 1.97 1.08 4.41c.09.43 0 .82-.28 1.17-.25.31-.56.45-.94.45-.31 0-.58-.1-.8-.34-.22-.23-.34-.5-.37-.82L16.97 5zM5.06 5h1.97l-.61 4.84C6.3 10.63 5.91 11 5.25 11c-.41 0-.72-.14-.94-.45-.28-.35-.37-.74-.28-1.17zm3.99 0H11v4.7c0 .35-.11.65-.36.92-.25.26-.56.38-.94.38-.34 0-.63-.12-.86-.41S8.5 10 8.5 9.66V9.5zM13 5h1.95l.55 4.5c.08.42 0 .77-.29 1.07-.26.3-.6.43-1.01.43-.31 0-.59-.12-.84-.38A1.3 1.3 0 0 1 13 9.7zm-5.55 7.05c.63.62 1.41.95 2.35.95.84 0 1.58-.33 2.2-.95.69.62 1.45.95 2.3.95.87 0 1.62-.33 2.25-.95.56.62 1.31.95 2.25.95h.23v6H5v-6h.25c.91 0 1.64-.33 2.2-.95"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://helixrf.com/remote-support/" target="_blank" rel="noopener" title="Free remote support" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c-5 0-9 4-9 9v7a3 3 0 0 0 3 3h3v-8H5v-2a7 7 0 0 1 7-7 7 7 0 0 1 7 7v2h-4v8h4v1h-7v2h6a3 3 0 0 0 3-3V10c0-5-4.03-9-9-9"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
