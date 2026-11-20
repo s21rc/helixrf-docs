@@ -21,24 +21,26 @@ Product pages on helixrf.com link to `docs.helixrf.com/<docs_slug>/latest/` and 
 ## Commands (repo root, `.venv` active)
 
 ```powershell
-mkdocs serve -f products/helixrf-sspa-controller/mkdocs.yml
-mkdocs build --strict -f products/helixrf-sspa-controller/mkdocs.yml
-
-# Publish a version (firmware minor release) and move "latest"
-mike deploy -F products/helixrf-sspa-controller/mkdocs.yml --deploy-prefix helixrf-sspa-controller --push --update-aliases <ver> latest
-mike set-default -F products/helixrf-sspa-controller/mkdocs.yml --deploy-prefix helixrf-sspa-controller --push latest
+mkdocs serve -f products/helixrf-sspa-controller/mkdocs.yml          # local preview
+mkdocs build --strict -f products/helixrf-sspa-controller/mkdocs.yml # check
 ```
 
-### Landing page
+## Publishing (public)
 
-`landing/` is the page at the root of docs.helixrf.com. Copy it to the root of the `gh-pages`
-branch (next to the product folders, keep the `CNAME` file there) and push:
+docs.helixrf.com is GitHub Pages, served from the `gh-pages` branch (custom domain in
+`CNAME`; DNS: CNAME `docs` -> `s21rc.github.io`). Commit and push `main` first, then:
 
 ```powershell
-git worktree add ..\helixrf-docs-pages gh-pages
-Copy-Item -Recurse -Force landing\* ..\helixrf-docs-pages\
-cd ..\helixrf-docs-pages; git add -A; git commit -m "Update landing page"; git push; cd ..\helixrf-docs
-git worktree remove ..\helixrf-docs-pages
+.\publish-docs.ps1 -Version 1.1               # SSPA Controller 1.1, moves "latest"
+.\publish-docs.ps1 -Version 1.1 -NoLatest     # publish without moving "latest"
+.\publish-docs.ps1 -Product helixrf-nmos-highside-switch -Version 1.0
+.\publish-docs.ps1 -Landing                   # copy landing/ to the gh-pages root
+.\publish-docs.ps1 -List                      # published versions
 ```
 
+Re-publishing the same version number overwrites it (fine for typo fixes).
 Versions follow firmware minor releases; hardware revisions are content tabs inside pages.
+
+New product: copy `products/helixrf-sspa-controller` to `products/<brand>-<product>`, change
+`site_name`, `site_description`, `site_url`, `edit_uri` and `nav`, keep the `build/`, `setup/`
+and `firmware/` folders, add a card to `landing/index.html`, then publish both.
