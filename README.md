@@ -21,12 +21,12 @@ Product pages on helixrf.com link to `docs.helixrf.com/<docs_slug>/latest/` and 
 ## Commands (repo root, `.venv` active)
 
 ```powershell
-mkdocs serve -f products/sspa-controller/mkdocs.yml
-mkdocs build --strict -f products/sspa-controller/mkdocs.yml
+mkdocs serve -f products/helixrf-sspa-controller/mkdocs.yml
+mkdocs build --strict -f products/helixrf-sspa-controller/mkdocs.yml
 
 # Publish a version (firmware minor release) and move "latest"
-mike deploy -F products/sspa-controller/mkdocs.yml --deploy-prefix sspa-controller --push --update-aliases <ver> latest
-mike set-default -F products/sspa-controller/mkdocs.yml --deploy-prefix sspa-controller --push latest
+mike deploy -F products/helixrf-sspa-controller/mkdocs.yml --deploy-prefix helixrf-sspa-controller --push --update-aliases <ver> latest
+mike set-default -F products/helixrf-sspa-controller/mkdocs.yml --deploy-prefix helixrf-sspa-controller --push latest
 ```
 
 ### Landing page
