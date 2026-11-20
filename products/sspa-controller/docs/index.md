@@ -37,5 +37,5 @@ firmware **[x.y]**; use the version menu at the top to read an older one.
 
 </div>
 
-[Buy the controller](https://helixrf.com/product/helix-sspa-controller/){ .md-button .md-button--primary }
+[Buy the controller](https://helixrf.com/product/helixrf-sspa-controller/){ .md-button .md-button--primary }
 [Request remote support](https://helixrf.com/remote-support/){ .md-button }
