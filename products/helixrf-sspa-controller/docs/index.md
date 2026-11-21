@@ -17,6 +17,20 @@ firmware **[x.y]**; use the version menu at the top to read an older one.
 
 --8<-- "safety-rf.md"
 
+## System overview
+
+The controller sits at the centre of the amplifier: it switches the RF path,
+biases the pallet, watches SWR, temperature, voltage and current, and talks to
+the radio, the display and the optional modules. Numbered blocks are
+explained in the notes on the diagram.
+
+<figure markdown>
+  [![HelixRF SSPA Controller V4 system block diagram](assets/wiring/system-block-diagram.png){ loading=lazy }](assets/wiring/system-block-diagram.png)
+  <figcaption>System block diagram. Click to enlarge, or
+  [download the PDF](assets/wiring/helixrf-sspa-v4-block-diagram.pdf) for printing.</figcaption>
+</figure>
+
+
 <div class="grid cards" markdown>
 
 -   :material-hammer-wrench: **[Build guide](build/index.md)**

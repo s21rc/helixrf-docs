@@ -15,8 +15,15 @@ every connector.
 
 ## Overview
 
-The four diagrams below show the whole system. The sections after them cover
+The diagrams below show the whole system: the block diagram first, then the
+harness, power, RF and I/O wiring. The sections after them cover
 each connector in detail.
+
+=== "System"
+
+    ![HelixRF SSPA Controller V4 system block diagram](../assets/wiring/system-block-diagram.png){ loading=lazy }
+
+    [Download the PDF](../assets/wiring/helixrf-sspa-v4-block-diagram.pdf) for printing.
 
 === "Control harness"
 
