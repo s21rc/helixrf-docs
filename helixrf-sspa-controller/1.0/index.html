@@ -380,6 +380,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -396,6 +414,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -608,6 +656,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -641,6 +708,17 @@ firmware <strong>[x.y]</strong>; use the version menu at the top to read an olde
 <p class="admonition-title">RF safety</p>
 <p>High RF power. Never operate without a proper load or antenna connected.</p>
 </div>
+<h2 id="system-overview">System overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h2>
+<p>The controller sits at the centre of the amplifier: it switches the RF path,
+biases the pallet, watches SWR, temperature, voltage and current, and talks to
+the radio, the display and the optional modules. Numbered blocks are
+explained in the notes on the diagram.</p>
+<figure>
+<p><a href="assets/wiring/system-block-diagram.png"><img alt="HelixRF SSPA Controller V4 system block diagram" loading="lazy" src="assets/wiring/system-block-diagram.png" /></a>
+  </p>
+<figcaption>System block diagram. Click to enlarge, or
+  [download the PDF](assets/wiring/helixrf-sspa-v4-block-diagram.pdf) for printing.</figcaption>
+</figure>
 <div class="grid cards">
 <ul>
 <li>
