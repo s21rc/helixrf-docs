@@ -26,7 +26,10 @@ param(
     [switch]$Yes
 )
 
-$ErrorActionPreference = 'Stop'
+# 'Continue', not 'Stop': mkdocs/mike/git print normal progress on stderr, which
+# Windows PowerShell 5.1 would otherwise turn into a terminating error.
+# Failures are caught by checking $LASTEXITCODE after each tool.
+$ErrorActionPreference = 'Continue'
 $env:NO_MKDOCS_2_WARNING = '1'
 Set-Location $PSScriptRoot
 
