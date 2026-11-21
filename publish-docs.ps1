@@ -36,6 +36,9 @@ $config = "products/$Product/mkdocs.yml"
 
 if (-not (Test-Path $mike)) { throw 'mike not found. Create .venv and run: pip install -r requirements.txt' }
 
+# mike runs "mkdocs" by name, so .venv\Scripts must be on PATH even when .venv isn't activated.
+$env:PATH = (Join-Path $PSScriptRoot '.venv\Scripts') + [IO.Path]::PathSeparator + $env:PATH
+
 function Confirm-Publish([string]$what) {
     if ($Yes) { return }
     $answer = Read-Host "Publish $what to docs.helixrf.com (public)? (y/N)"
