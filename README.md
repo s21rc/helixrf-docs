@@ -2,6 +2,8 @@
 
 HelixRF product documentation (https://docs.helixrf.com), built with MkDocs Material and versioned with mike.
 
+**Step-by-step guide for editing, previewing and publishing: [EDITING.md](EDITING.md).**
+
 ## Layout
 
 ```
