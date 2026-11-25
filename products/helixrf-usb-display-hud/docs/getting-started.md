@@ -5,14 +5,52 @@
 Download the firmware from the link in the product description, or from
 **My account → Downloads** on [helixrf.com](https://helixrf.com/my-account/downloads/).
 
-The firmware file is named `helixrf_hud.bin`. [TODO: file size, and whether the
-download is the bare `.bin` or a package with an installer.]
+The app is a binary firmware file (`.bin`) that you install on the display.
+
+| File | Use it for |
+|---|---|
+| `helixrf_hud_full.bin` | First install over USB, at address **0x0**. It holds the boot loader, the partition table and the app. |
+| `helixrf_hud.bin` | Updates over WiFi from the web interface. App only. |
+
+!!! warning "Use the right file"
+    Never write `helixrf_hud.bin` at address 0x0. It is the app only, and the
+    display will not start. Use `helixrf_hud_full.bin` for the first install.
 
 ## 2. Install
 
-[TODO: how the customer puts the firmware on a new display for the first time
-(for example a web flasher, a USB flashing tool, or a display shipped with the
-firmware installed).]
+The display must have an ESP32-P4 chip of silicon revision 3 (v3.1 or later).
+Check your display's documentation if you are not sure.
+
+You can use the flashing tool on our site [TODO: link], or a flashing tool from
+Espressif that supports the ESP32-P4, such as the
+[Espressif web flasher (esptool-js)](https://espressif.github.io/esptool-js/).
+
+1. Connect the display to your PC with a USB cable. Any USB port on the display
+   works for this first install.
+2. Open the flashing tool in **Chrome** or **Edge**. Other browsers cannot
+   reach a serial port.
+3. Click **Connect**. When the browser asks, pick the display's serial port and
+   allow access.
+4. If the tool asks for the chip, select **ESP32-P4**.
+5. Set the flash address to **0x0** and choose `helixrf_hud_full.bin`.
+6. Click **Program** and wait until the tool reports it is done.
+7. Unplug the USB cable and power the display again. The HelixRF logo appears,
+   then the main screen.
+
+??? note "Command-line install with esptool"
+    With Espressif's esptool:
+
+    ```
+    esptool.py --chip esp32p4 write_flash 0x0 helixrf_hud_full.bin
+    ```
+
+    Add `-p COMx` (Windows) or `-p /dev/ttyUSBx` (Linux) if more than one serial
+    port is connected.
+
+!!! tip "Display does not connect?"
+    Put the display in download mode as its manual describes (on most ESP32
+    boards: hold **BOOT**, press and release **RESET**, then release **BOOT**),
+    and click **Connect** again.
 
 Once the HUD is running and on your WiFi, later versions are installed from the
 web interface. See [Update the firmware](#5-update-the-firmware).
@@ -55,9 +93,9 @@ Payment and invoicing are handled by our Merchant of Record, Paddle.com Market L
 </figure>
 
 1. Tap **SETTINGS**, then the **Licence** tab.
-2. Note the **Device ID** (for example `K7Q2-M9XD`) and send it to HelixRF.
-   [TODO: how the customer sends the Device ID: at checkout, by email, or
-   another way.]
+2. Note the **Device ID** (for example `K7Q2-M9XD`) and send it to HelixRF:
+   type it in the Device ID field at checkout when you order, or email it with
+   your order number to [s21rc@helixrf.com](mailto:s21rc@helixrf.com).
 3. When the activation code arrives, type it in the **activation code** field.
    Dashes, spaces and upper or lower case do not matter.
 4. Tap **Activate**. The status changes to show the licence is active.

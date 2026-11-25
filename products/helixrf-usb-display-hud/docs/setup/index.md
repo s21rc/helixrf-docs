@@ -2,30 +2,40 @@
 
 ## Supported radios
 
-The HUD talks to Icom radios over CI-V on the radio's USB port. Choose the brand
-and model in **Settings → Radio**; the HUD then fills in the CI-V address and
-baud rate for that model.
+The HUD talks to Icom radios over CI-V on the radio's USB port. The list of
+compatible displays and radios is in the
+[product description](https://helixrf.com/product/helixrf-external-usb-radio-display-app/);
+radios are added gradually.
 
-| Radio | Connection | Default CI-V address | Notes |
-|---|---|---|---|
-| Icom IC-7300 | USB (CI-V + audio) | 94h | Tested. |
-| Icom IC-7300MK2 | USB (CI-V) | B6h | [TODO: confirm tested and the CI-V address] |
-| Icom IC-705 | USB (CI-V) | A4h | [TODO: confirm tested] |
-| Icom IC-7610 | USB (CI-V) | 98h | [TODO: confirm tested] |
-| Icom IC-9700 | USB (CI-V) | A2h | [TODO: confirm tested] |
-| Icom IC-905 | USB (CI-V) | ACh | [TODO: confirm tested] |
-| Icom IC-7851 | USB (CI-V) | 8Eh | [TODO: confirm tested] |
-| Icom IC-R8600 | USB (CI-V) | 96h | [TODO: confirm tested] |
-| Yaesu FT-710 | USB (CAT) | — | In the model list; CAT control comes in a later update. |
-| Kenwood TS-890S | USB (CAT) | — | In the model list; CAT control comes in a later update. |
+Choose the brand and model in **Settings → Radio**; the HUD then fills in the
+default CI-V address and baud rate for that model. The model list in the app:
+
+| Radio | Connection | Default CI-V address |
+|---|---|---|
+| Icom IC-7300 | USB (CI-V + audio) | 94h |
+| Icom IC-7300MK2 | USB (CI-V + audio) | B6h |
+| Icom IC-705 | USB (CI-V + audio) | A4h |
+| Icom IC-7610 | USB (CI-V + audio) | 98h |
+| Icom IC-9700 | USB (CI-V + audio) | A2h |
+| Icom IC-905 | USB (CI-V + audio) | ACh |
+| Icom IC-7851 | USB (CI-V + audio) | 8Eh |
+| Icom IC-R8600 | USB (CI-V + audio) | 96h |
+| Yaesu FT-710 | USB (CAT) | — |
+| Kenwood TS-890S | USB (CAT) | — |
+
+!!! note
+    A model in this list is not necessarily confirmed compatible; check the
+    product description. Yaesu and Kenwood radios are in the list for a later
+    update that adds their CAT control.
 
 Decoding uses the radio's USB audio (receive audio), so it needs a radio with a
 built-in USB sound card, such as the IC-7300.
 
 ## Connect the radio
 
-1. Connect the radio's USB port to the HUD's USB host port with a USB cable.
-   [TODO: name or picture of the HUD port to use.]
+1. Connect the radio's USB port to the display's **high-speed USB port** with a
+   USB cable. Check your display's manual to find which port that is. (Any port
+   works for installing the app; only the high-speed port works for the radio.)
 2. Switch the radio on. No driver is needed; the HUD finds the radio by itself.
 3. On the HUD, tap **SETTINGS** and open the **Radio** tab.
 4. Choose the **Brand** and **Radio model**.
@@ -108,7 +118,7 @@ found, the CI-V link and the firmware.
 
 | Symptom | Fix |
 |---|---|
-| USB icon red, **USB host** shows no devices | Check the cable and that the radio is on. Use the HUD's USB host port. Try another USB cable. |
+| USB icon red, **USB host** shows no devices | Check the cable and that the radio is on. Use the display's high-speed USB port. Try another USB cable. |
 | USB devices listed, but no radio (CI-V shows no reply) | Check **USB baud** and **CI-V address** match the radio's menu. Set **CI-V Transceive** to **ON**. |
 | Frequency shows but no spectrum scope | Set **CI-V USB Baud Rate** to 115200 (or Auto) on the radio and **USB baud** to 115200 on the HUD. |
 | Decode page shows no audio | The radio's USB audio codec must be listed under **USB host** in **Settings → Status**. |
