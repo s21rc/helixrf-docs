@@ -69,8 +69,6 @@ On the IC-7300, open **MENU → SET → Connectors** and set:
 | **USB SEND / USB Keying** | **OFF** | Transmit from the network goes over CI-V. |
 | **MOD Input → DATA MOD** | **USB** | Transmit audio from the network in the -D modes. Only needed for the network radio server. |
 
-[TODO: menu paths for the other supported radios.]
-
 ## Network radio server (wfview)
 
 The HUD can act as a network radio, so you can run wfview or similar LAN-radio
@@ -104,7 +102,7 @@ When you switch it on:
     the station. You are responsible for every transmission.
 
 For FT8 with WSJT-X on the PC, use wfview's virtual serial port or rigctld for
-CAT and PTT. [TODO: tested WSJT-X settings.]
+CAT and PTT.
 
 ## Troubleshooting
 
@@ -127,3 +125,11 @@ found, the CI-V link and the firmware.
 | `helixrf-hud.local` does not open | Use the IP address from **Settings → WiFi** instead. Some computers and phones do not support `.local` names. |
 | Touch is offset | Run **Calibrate touch** in **Settings → Display**. See [Using the app](../using/index.md#display). |
 | wfview cannot log in | Check the username and password in **Settings → Radio**, that **Server on** is set, and that the HUD has a licence or a running trial. |
+
+## Getting help
+
+Still stuck? Every HelixRF product includes
+[free remote support](https://helixrf.com/remote-support/). You can also use the
+[contact page](https://helixrf.com/contact/) or email
+[s21rc@helixrf.com](mailto:s21rc@helixrf.com). Tell us your Device ID, the
+firmware version (**Settings → Status**) and your radio model.

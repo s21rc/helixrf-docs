@@ -1,5 +1,9 @@
 # Getting started
 
+Five steps take you from a new display to a working HUD: download the app,
+install it on the display, connect to WiFi, activate your licence and connect
+your radio.
+
 ## 1. Download
 
 Download the firmware from the link in the product description, or from
@@ -21,9 +25,8 @@ The app is a binary firmware file (`.bin`) that you install on the display.
 The display must have an ESP32-P4 chip of silicon revision 3 (v3.1 or later).
 Check your display's documentation if you are not sure.
 
-You can use the flashing tool on our site [TODO: link], or a flashing tool from
-Espressif that supports the ESP32-P4, such as the
-[Espressif web flasher (esptool-js)](https://espressif.github.io/esptool-js/).
+Use the flashing tools at [helixrf.com](https://helixrf.com), or any flashing
+tool from Espressif that supports ESP32-P4 silicon revision 3.
 
 1. Connect the display to your PC with a USB cable. Any USB port on the display
    works for this first install.
@@ -81,11 +84,13 @@ does not work on your computer, use the IP address shown under the QR code.
 
 ## 4. Activate your licence
 
-The HUD has a **Device ID**, made from the hardware. A licence is an
-**activation code** (108 characters) made for that Device ID.
+The HUD has a **Device ID**, made from the hardware. Your licence key is an
+**activation code** (108 characters) made for that Device ID, so it works on
+that display only.
 
 Your unique licence key is emailed within 72 hours of successful payment.
 Payment and invoicing are handled by our Merchant of Record, Paddle.com Market Ltd.
+Nothing is shipped.
 
 <figure markdown>
   ![Settings Licence tab with the Device ID, trial status, activation code field and Activate button](assets/images/settings-licence.webp){ loading=lazy }

@@ -1,6 +1,11 @@
 # Release notes
 
-## [TODO: x.y] — [TODO: date]
+The latest firmware is always available from **My account → Downloads** on
+[helixrf.com](https://helixrf.com/my-account/downloads/). Install it from the
+web interface as described in
+[Update the firmware](../getting-started.md#5-update-the-firmware).
+
+## Latest
 
 First release.
 
@@ -16,4 +21,3 @@ First release.
 - Network radio server for wfview and similar LAN-radio software, with remote
   transmit off by default.
 - Licence activation by Device ID, and a 14-day trial.
-- [TODO: confirm the list matches the released version.]
