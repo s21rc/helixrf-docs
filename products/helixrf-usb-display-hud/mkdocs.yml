@@ -1,0 +1,73 @@
+site_name: HelixRF USB Display HUD
+site_description: Install, licence, setup and release notes for the HelixRF USB Display HUD app.
+site_url: https://docs.helixrf.com/helixrf-usb-display-hud/
+repo_url: https://github.com/s21rc/helixrf-docs
+edit_uri: edit/main/products/helixrf-usb-display-hud/docs/
+docs_dir: docs
+copyright: "© HELIXRF LLC · <a href=\"https://helixrf.com/privacy-policy/\">Privacy</a> · <a href=\"https://helixrf.com/legal-notice/\">Legal notice</a>"
+
+theme:
+  name: material
+  # Shared HelixRF styling, fonts and logos for every product site.
+  custom_dir: ../../overrides
+  font: false            # fonts are self-hosted in overrides/assets/fonts
+  logo: assets/images/logo-dark-bg.png
+  favicon: assets/images/favicon-96.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  palette:
+    # Dark lab-instrument palette first (default), like helixrf.com
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-sunny, name: Light mode }
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-night, name: Dark mode }
+
+extra:
+  version:
+    provider: mike
+  homepage: https://helixrf.com
+  generator: false
+  social:
+    - icon: material/storefront-outline
+      link: https://helixrf.com/shop/
+      name: HelixRF shop
+    - icon: material/headset
+      link: https://helixrf.com/remote-support/
+      name: Free remote support
+
+extra_css:
+  - assets/stylesheets/helixrf.css
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets: { base_path: [shared], check_paths: true }
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Setup: setup/index.md
+  - Using the app: using/index.md
+  - Release notes: release-notes/index.md
