@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://docs.helixrf.com/helixrf-sspa-controller/1.0/setup/">
       
       
-        <link rel="prev" href="../build/connectors/">
+        <link rel="prev" href="../using/">
       
       
-        <link rel="next" href="../firmware/">
+        <link rel="next" href="band-data/">
       
       
         
@@ -92,7 +92,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-header__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -215,115 +217,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Getting started
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../build/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Build guide
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Setup and calibration
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../firmware/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Firmware and release notes
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -337,10 +230,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-nav__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -424,40 +315,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../build/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
     
   
-    Build guide
+    Build and first power-up
   
 
     
@@ -465,30 +331,13 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Build guide
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -513,11 +362,30 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -589,10 +457,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#radio-profile-and-band-data" class="md-nav__link">
+  <a href="#power-module-current-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Radio profile and band data
+        Power module (current sensor)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lpf-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LPF map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-and-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperature and fan
       
     </span>
   </a>
@@ -611,10 +501,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-calibration" class="md-nav__link">
+  <a href="#rf-power-calibration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Power calibration
+        RF power calibration
       
     </span>
   </a>
@@ -622,10 +512,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rotator-calibration" class="md-nav__link">
+  <a href="#rotator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rotator calibration
+        Rotator
       
     </span>
   </a>
@@ -633,10 +523,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remote-monitoring" class="md-nav__link">
+  <a href="#diagnostics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Remote monitoring
+        Diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test the protection
       
     </span>
   </a>
@@ -658,6 +559,60 @@
   
   
     <li class="md-nav__item">
+      <a href="band-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Band data and radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network, display and PSU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../firmware/" class="md-nav__link">
         
   
@@ -666,6 +621,60 @@
     
   
     Firmware and release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical reference
   
 
     
@@ -705,10 +714,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#radio-profile-and-band-data" class="md-nav__link">
+  <a href="#power-module-current-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Radio profile and band data
+        Power module (current sensor)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lpf-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LPF map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-and-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperature and fan
       
     </span>
   </a>
@@ -727,10 +758,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-calibration" class="md-nav__link">
+  <a href="#rf-power-calibration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Power calibration
+        RF power calibration
       
     </span>
   </a>
@@ -738,10 +769,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rotator-calibration" class="md-nav__link">
+  <a href="#rotator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rotator calibration
+        Rotator
       
     </span>
   </a>
@@ -749,10 +780,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remote-monitoring" class="md-nav__link">
+  <a href="#diagnostics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Remote monitoring
+        Diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test the protection
       
     </span>
   </a>
@@ -780,35 +822,378 @@
 
 
 <h1 id="setup-and-calibration">Setup and calibration<a class="headerlink" href="#setup-and-calibration" title="Permanent link">&para;</a></h1>
-<h2 id="radio-profile-and-band-data">Radio profile and band data<a class="headerlink" href="#radio-profile-and-band-data" title="Permanent link">&para;</a></h2>
-<p>The controller reads band voltage, BCD, CAT, CI-V or RF sense. Choose a
-built-in radio profile, or create a custom profile with up to 12 bands.</p>
-<ol>
-<li>[Open Settings → Radio on the display.]</li>
-<li>[Pick your radio or create a custom profile.]</li>
-<li>[Check that the band follows your radio.]</li>
-</ol>
-<h2 id="protection">Protection<a class="headerlink" href="#protection" title="Permanent link">&para;</a></h2>
-<p>Hardware comparators trip on high SWR, filter reflection, over-temperature and
-over-current, and a latch holds the fault. The default SWR trip is 3:1.</p>
-<div class="admonition warning">
-<p class="admonition-title">Test protection before operating</p>
-<p>[Describe how to verify each trip with a dummy load before going on the air.]</p>
+<p>Configure the controller for your amplifier, in the order below. Every page
+is opened from the menu (swipe down on the main screen) and saved with
+<strong>APPLY</strong>. <strong>Configuration Saved</strong> confirms that the controller has stored
+the settings.</p>
+<div class="admonition danger">
+<p class="admonition-title">RF safety</p>
+<p>High RF power. Never operate without a proper load or antenna connected.</p>
 </div>
-<h2 id="power-calibration">Power calibration<a class="headerlink" href="#power-calibration" title="Permanent link">&para;</a></h2>
-<p>[Forward and reflected power calibration steps.]</p>
-<h2 id="rotator-calibration">Rotator calibration<a class="headerlink" href="#rotator-calibration" title="Permanent link">&para;</a></h2>
-<p>Left and right relay outputs, a position-pot input and 3-point calibration,
-up to 450° azimuth.</p>
+<h2 id="power-module-current-sensor">Power module (current sensor)<a class="headerlink" href="#power-module-current-sensor" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Power</strong>. Tells the controller how to read the PA current from your
+High Side Switch or power module, and trims the voltage and current readings.</p>
+<p>Three sensor types are supported. Choose the one your module uses in
+<strong>CURRENT SENSOR TYPE</strong>, and take its values from the module's manual or the
+sensor's datasheet. The fields on the page change with the type.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SHUNT+AMP</label><label for="__tabbed_1_2">HALL EFFECT</label><label for="__tabbed_1_3">BTSx</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Power module settings, SHUNT+AMP" loading="lazy" src="../assets/images/settings-power-shunt.webp" /></p>
+<p>A shunt resistor with a current-sense amplifier (for example INA240).</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REF VOLT (mV)</strong></td>
+<td>The amplifier's output at zero current. 0 for a unidirectional amplifier.</td>
+</tr>
+<tr>
+<td><strong>SHUNT (mili Ohm)</strong></td>
+<td>The shunt resistance <strong>in tenths of a milliohm</strong>: 10 = 1.0 mΩ.</td>
+</tr>
+<tr>
+<td><strong>GAIN (V/V)</strong></td>
+<td>The amplifier's gain, for example 20 for an INA240A1.</td>
+</tr>
+<tr>
+<td><strong>INVERT MODE</strong></td>
+<td>Tick if the current reads negative.</td>
+</tr>
+</tbody>
+</table>
+<p>Example: an INA240A1 (gain 20) with a 1 mΩ shunt is REF VOLT 0,
+SHUNT 10, GAIN 20.</p>
+</div>
+<div class="tabbed-block">
+<p>A Hall-effect current sensor.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REF VOLT (mV)</strong></td>
+<td>The sensor's output at zero current, from its datasheet (often half its supply).</td>
+</tr>
+<tr>
+<td><strong>HALL SENSITIVITY (mV/A)</strong></td>
+<td>The sensitivity <strong>in tenths of a mV/A</strong>: 400 = 40.0 mV/A.</td>
+</tr>
+<tr>
+<td><strong>INVERT MODE</strong></td>
+<td>Tick if the current reads negative.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><img alt="Power module settings, BTSx" loading="lazy" src="../assets/images/settings-power-bts.webp" /></p>
+<p>A PROFET high-side switch with a current-sense output (BTS50085 class).</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>K_ILIS</strong></td>
+<td>The current-sense ratio from the datasheet, for example 13000.</td>
+</tr>
+<tr>
+<td><strong>R_IS (Ohm)</strong></td>
+<td>The sense resistor fitted on the module. 0 if none is fitted (the controller's own 10.1 kΩ load is then used).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Calibration</strong> (all sensor types): with the PA supply on, compare
+<strong>VOLTAGE (V)</strong> and <strong>CURRENT (A)</strong> with a multimeter. Adjust <strong>VOLTAGE
+CALIBRATION</strong> and <strong>CURRENT CALIBRATION</strong> (percent, 50–150, 100 = no
+correction) until they match. The readings update as you press the buttons.
+Tap <strong>APPLY</strong>.</p>
+<h2 id="lpf-map">LPF map<a class="headerlink" href="#lpf-map" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>LPF Map</strong>. Chooses which of the eight LPF banks (BAND1–BAND8
+outputs) each band uses.</p>
+<figure>
+<p><img alt="Band to LPF map with a roller for each band" loading="lazy" src="../assets/images/settings-lpf-map.webp" />
+  </p>
+<figcaption>Band to LPF map.</figcaption>
+</figure>
 <ol>
-<li>[Turn to the first end stop and save.]</li>
-<li>[Turn to the middle point and save.]</li>
-<li>[Turn to the second end stop and save.]</li>
+<li>Scroll each band's roller to its LPF bank (LPF 1 = BAND1 output, and so
+   on). Bands that share a filter use the same bank.</li>
+<li>Tap <strong>APPLY</strong>.</li>
+<li>Check it: tap each band button on the main screen and confirm that the
+   right filter relay clicks.</li>
 </ol>
-<h2 id="remote-monitoring">Remote monitoring<a class="headerlink" href="#remote-monitoring" title="Permanent link">&para;</a></h2>
-<p>A WebSocket server feeds the web UI and the Windows and Android apps. Remote
-access is monitor plus rotator only, and PTT stays local.</p>
-<p>[Connect to WiFi and open the web UI.]</p>
+<div class="admonition danger">
+<p class="admonition-title">A wrong LPF map can destroy the PA</p>
+<p>Transmitting through a filter for a lower band puts the full output into
+a filter that reflects it. The LPF SWR trip catches this, but check the
+map at low power before you run full power on any band.</p>
+</div>
+<h2 id="temperature-and-fan">Temperature and fan<a class="headerlink" href="#temperature-and-fan" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Temperature</strong>.</p>
+<figure>
+<p><img alt="Temperature settings: fan PWM range, NTC resistance and beta, protection temperature" loading="lazy" src="../assets/images/settings-temperature.webp" />
+  </p>
+<figcaption>Temperature setting.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FAN PWM</strong> slider</td>
+<td>Left handle: the temperature where the fan starts to speed up (it runs at 10 % below it). Right handle: the temperature for full speed. Range 20–65 °C.</td>
+</tr>
+<tr>
+<td><strong>Invert PWM</strong></td>
+<td>Tick if the fan runs fast when cold.</td>
+</tr>
+<tr>
+<td><strong>RESISTANCE (25 °C)</strong></td>
+<td>Each NTC's resistance at 25 °C, in ohms (10000 for a 10 kΩ NTC).</td>
+</tr>
+<tr>
+<td><strong>BETA CONSTANT</strong></td>
+<td>Each NTC's beta value (3950 for the common 10 kΩ type).</td>
+</tr>
+<tr>
+<td><strong>PROTECTION AT</strong></td>
+<td>The hardware over-temperature trip point, set by RV5 (read only here). See <a href="#protection">Protection</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>The fan follows whichever NTC is hotter. Tap <strong>APPLY</strong>, then check both
+temperatures on the main screen against a thermometer.</p>
+<h2 id="protection">Protection<a class="headerlink" href="#protection" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Protection</strong>. The trip levels are set with trimmers on the
+controller board, not in software: the protection works even if the
+processor stops. This page shows each trimmer's setting as an approximate
+trip value, so you can set it and record it.</p>
+<figure>
+<p><img alt="Protection settings showing ADC, mV and approximate trip value for output power, drain current, drain voltage and temperature" loading="lazy" src="../assets/images/settings-protection.webp" />
+  </p>
+<figcaption>Protection settings.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Trimmer</th>
+<th>Sets</th>
+<th>Shown on this page as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RV1</strong></td>
+<td>LPF SWR trip</td>
+<td>Not shown (see below)</td>
+</tr>
+<tr>
+<td><strong>RV2</strong></td>
+<td>Output power trip (RF OUT)</td>
+<td>OUTPUT POWER, W</td>
+</tr>
+<tr>
+<td><strong>RV3</strong></td>
+<td>Supply voltage trip</td>
+<td>DRAIN VOLTAGE, V</td>
+</tr>
+<tr>
+<td><strong>RV4</strong></td>
+<td>Drain current trip</td>
+<td>DRAIN CURRENT, A</td>
+</tr>
+<tr>
+<td><strong>RV5</strong></td>
+<td>Temperature trip (NTC 1)</td>
+<td>TEMPERATURE, °C</td>
+</tr>
+</tbody>
+</table>
+<p>The antenna SWR trip is fixed at <strong>3:1</strong>. Bridge solder jumper <strong>JP1</strong> to
+make it <strong>2:1</strong>.</p>
+<p>The trip values shown depend on the settings before them: the power trip on
+the <a href="#rf-power-calibration">RF power calibration</a>, the current trip on the
+<a href="#power-module-current-sensor">current sensor</a>, the temperature trip on the
+<a href="#temperature-and-fan">NTC values</a>. Set those first. Set RV2 after the RF
+calibration.</p>
+<ol>
+<li>Turn each trimmer until its <strong>TRIP VALUE</strong> reads the level you want. Set
+   the trips a safe margin above normal operation and below the pallet's
+   ratings:<ul>
+<li><strong>Drain voltage:</strong> a few volts above your PA supply voltage.</li>
+<li><strong>Drain current:</strong> above the highest current at full power, below the
+  pallet's maximum.</li>
+<li><strong>Temperature:</strong> below the pallet's maximum heatsink temperature.</li>
+<li><strong>Output power:</strong> above your full output power, below the pallet's and
+  the LPF's rating.</li>
+</ul>
+</li>
+<li>Write the values down for future reference.</li>
+<li>Tap <strong>APPLY</strong>.</li>
+</ol>
+<p><strong>LPF SWR (RV1).</strong> RV1 sets how much reflection between the PA and the LPF
+trips the amplifier. Its setting is not shown on the display. More
+resistance on RV1 makes the trip less sensitive. Set it so that:</p>
+<ul>
+<li>with the <strong>correct</strong> filter, the amplifier never trips at full power into a
+  dummy load, and</li>
+<li>with a <strong>wrong</strong> filter (map the band to a lower band's bank for the test),
+  it trips at low power.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The trip values on this page are approximate. Comparator offset and the
+hysteresis resistors shift the real trip point a little. Confirm each
+trip with the <a href="#test-the-protection">test</a> below.</p>
+</div>
+<p><strong>Enable TX Time out timer (TOT)</strong> is reserved for a later firmware and has
+no effect in firmware 105.</p>
+<h2 id="rf-power-calibration">RF power calibration<a class="headerlink" href="#rf-power-calibration" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>RF Calibrate</strong>. Calibrates the power meter (and the output power
+trip) at three power levels, against a reference wattmeter.</p>
+<figure>
+<p><img alt="3 point RF calibration page with live ADC values and LOW, MID and HIGH points" loading="lazy" src="../assets/images/settings-rf-calibrate.webp" />
+  </p>
+<figcaption>3-point RF calibration.</figcaption>
+</figure>
+<p>You need a dummy load rated for full power and a reference wattmeter
+between the amplifier and the load. Use a steady carrier (CW key down, FM or
+RTTY), on the band you use most.</p>
+<ol>
+<li>Set the radio to a low drive. Key the amplifier and read the wattmeter:
+   about 20 % of full power.</li>
+<li>While transmitting, set <strong>LOW · Forward Power Measured</strong> to the
+   wattmeter reading with <strong>−</strong> / <strong>+</strong> (tap for 1 W, hold for 10 W), then
+   tap the <strong>1</strong> to capture the ADC values. They appear under <strong>ADC Value
+   Measured</strong>.</li>
+<li>Unkey. Repeat at about 50 % power for <strong>MID</strong> (tap <strong>2</strong>) and at full
+   power for <strong>HIGH</strong> (tap <strong>3</strong>).</li>
+<li>Tap <strong>APPLY</strong>.</li>
+</ol>
+<p>The three points must increase from LOW to HIGH. The live <strong>ADC Value</strong> at
+the top shows the forward and reflected readings while you transmit.
+Uncalibrated, the power meter reads 0.</p>
+<h2 id="rotator">Rotator<a class="headerlink" href="#rotator" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Rotator</strong>.</p>
+<figure>
+<p><img alt="Rotator setup: enable, CCW stop heading, 450 degree option and 3-point calibration" loading="lazy" src="../assets/images/settings-rotator.webp" />
+  </p>
+<figcaption>Rotator setup.</figcaption>
+</figure>
+<ol>
+<li>Tick <strong>Enable rotator control</strong>.</li>
+<li>Set <strong>CCW stop heading</strong>: the compass direction the antenna points to at
+   the counter-clockwise end stop (North, East, South or West).</li>
+<li>Tick <strong>Enable 450° max AZ</strong> if your rotator turns 450°.</li>
+<li>Hold <strong>&lt;&lt;</strong> until the rotator reaches its counter-clockwise end stop.
+   Tap <strong>APPLY</strong> on line <strong>1)</strong>.</li>
+<li>Hold <strong>&gt;&gt;</strong> for one full turn clockwise (360°). Tap <strong>APPLY</strong> on line
+   <strong>2)</strong>.</li>
+<li>For a 450° rotator, hold <strong>&gt;&gt;</strong> to the clockwise end stop. Tap <strong>APPLY</strong>
+   on line <strong>3)</strong>.</li>
+<li>Tap <strong>APPLY</strong> at the bottom to save.</li>
+</ol>
+<p>On this page the &lt;&lt; &gt;&gt; buttons ignore the soft limits, so you can reach the
+end stops. <strong>Rotator ADC</strong> shows the live position reading; it must change
+smoothly as the rotator turns. If <strong>&gt;&gt;</strong> turns counter-clockwise, swap the
+relay wires (see <a href="../build/connectors/#j32-j33-rotator">J32</a>).</p>
+<p>On the main screen, hold <strong>&lt;&lt;</strong> or <strong>&gt;&gt;</strong> to turn; the rotator stops when you
+release. For control from a PC program, see
+<a href="network/#rotator-over-the-network">Rotator over the network</a>.</p>
+<h2 id="diagnostics">Diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Diagnose</strong>. Live readings of every analog input, for fault finding.</p>
+<figure>
+<p><img alt="Diagnostics page with MCU ADC, MCU value and translated value for each input" loading="lazy" src="../assets/images/diagnostics.webp" />
+  </p>
+<figcaption>Diagnostics.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MCU ADC</strong></td>
+<td>Raw reading, 0–4095</td>
+</tr>
+<tr>
+<td><strong>MCU VALUE</strong></td>
+<td>Voltage at the processor pin, in mV</td>
+</tr>
+<tr>
+<td><strong>TRANS VALUE</strong></td>
+<td>Translated back to the connector, for example the radio's real band voltage before the on-board divider</td>
+</tr>
+</tbody>
+</table>
+<p>A reading stuck at 0 usually means an open connection; 4095 with nothing
+applied means a short to a supply or a wrong wiring. <strong>BCD-A</strong> to <strong>BCD-D</strong>
+show the four BCD inputs as 0 or 1.</p>
+<h2 id="test-the-protection">Test the protection<a class="headerlink" href="#test-the-protection" title="Permanent link">&para;</a></h2>
+<p>Test every trip into a dummy load before going on the air, and again after
+any change to the wiring or the trimmers. Each time, check that the
+indicator lights, <strong>PA RESET</strong> turns red, the relay drops and the bias goes
+off. Then reset with PA RESET.</p>
+<table>
+<thead>
+<tr>
+<th>Trip</th>
+<th>How to test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ANT SWR</strong></td>
+<td>At low power, transmit into a load above 3:1 (for example 200 Ω, 4:1).</td>
+</tr>
+<tr>
+<td><strong>LPF SWR</strong></td>
+<td>At low power, map the band to a lower band's LPF bank and transmit. Restore the LPF map afterwards.</td>
+</tr>
+<tr>
+<td><strong>RF OUT</strong></td>
+<td>Turn RV2 down to a low trip (for example 100 W) and transmit above it. Set RV2 back.</td>
+</tr>
+<tr>
+<td><strong>VOLTAGE</strong></td>
+<td>With the PA supply on, turn RV3 down until it trips. Set RV3 back.</td>
+</tr>
+<tr>
+<td><strong>CURRENT</strong></td>
+<td>Turn RV4 down to a low trip and transmit. Set RV4 back.</td>
+</tr>
+<tr>
+<td><strong>TEMP.</strong></td>
+<td>Turn RV5 down to just below the heatsink temperature. Set RV5 back.</td>
+</tr>
+</tbody>
+</table>
+<p>After setting a trimmer back, check its value on the Protection page against
+the value you wrote down.</p>
 
 
 
@@ -846,7 +1231,7 @@ access is monitor plus rotator only, and PTT stays local.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../build/connectors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connectors and wiring">
+          <a href="../using/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the controller">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -856,20 +1241,20 @@ access is monitor plus rotator only, and PTT stays local.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Connectors and wiring
+                Using the controller
               </div>
             </div>
           </a>
         
         
           
-          <a href="../firmware/" class="md-footer__link md-footer__link--next" aria-label="Next: Firmware and release notes">
+          <a href="band-data/" class="md-footer__link md-footer__link--next" aria-label="Next: Band data and radio">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Firmware and release notes
+                Band data and radio
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -926,7 +1311,7 @@ access is monitor plus rotator only, and PTT stays local.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>

@@ -27,7 +27,7 @@
     
     
       
-        <title>Build guide - Helix SSPA Controller</title>
+        <title>Build and first power-up - Helix SSPA Controller</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-guide" class="md-skip">
+        <a href="#build-and-first-power-up" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-header__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build guide
+              Build and first power-up
             
           </span>
         </div>
@@ -215,115 +217,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Getting started
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Build guide
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../setup/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Setup and calibration
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../firmware/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Firmware and release notes
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -337,10 +230,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-nav__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -426,43 +317,22 @@
   
   
   
-    
-    
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
         
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
   
   
   <span class="md-ellipsis">
     
   
-    Build guide
+    Build and first power-up
   
 
     
@@ -470,30 +340,95 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
   
-    Build guide
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and first power-up
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-power-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First power-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test points
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -518,11 +453,30 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -542,6 +496,60 @@
     
   
     Setup and calibration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/band-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Band data and radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network, display and PSU
   
 
     
@@ -581,6 +589,60 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -608,32 +670,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#in-the-box" class="md-nav__link">
+  <a href="#what-you-need" class="md-nav__link">
     <span class="md-ellipsis">
       
-        In the box
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools-and-parts-you-need" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools and parts you need
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assembly" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Assembly
+        What you need
       
     </span>
   </a>
@@ -662,6 +702,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#test-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test points
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -682,37 +733,23 @@
   
 
 
-<h1 id="build-guide">Build guide<a class="headerlink" href="#build-guide" title="Permanent link">&para;</a></h1>
-<p>Assembly, wiring and first power-up for the kit version. The assembled and
-tested version starts at <a href="#wiring">Wiring</a>.</p>
+<h1 id="build-and-first-power-up">Build and first power-up<a class="headerlink" href="#build-and-first-power-up" title="Permanent link">&para;</a></h1>
+<p>How to wire the controller into your amplifier and check it before the PA
+supply is ever switched on.</p>
 <div class="admonition danger">
 <p class="admonition-title">RF safety</p>
 <p>High RF power. Never operate without a proper load or antenna connected.</p>
 </div>
-<h2 id="in-the-box">In the box<a class="headerlink" href="#in-the-box" title="Permanent link">&para;</a></h2>
+<h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[Controller board]</li>
-<li>[Display module + cable]</li>
-<li>[Connectors / harness]</li>
-<li>[Quick-start card]</li>
+<li>A <strong>12 V DC supply</strong> for the controller (see <a href="connectors/#j22-j23-12-v-power-in">J22</a>).</li>
+<li><strong>JST PH (2.0 mm)</strong> housings and crimp contacts, or wire for the solder pads.</li>
+<li>Shielded cable or twisted pairs for the SWR bridge signals.</li>
+<li>A <strong>multimeter</strong>.</li>
+<li>A <strong>dummy load</strong> rated for the full output power, and a <strong>reference
+  wattmeter</strong> for the power calibration.</li>
+<li>A small screwdriver for the protection trimmers (RV1–RV5).</li>
 </ul>
-<h2 id="tools-and-parts-you-need">Tools and parts you need<a class="headerlink" href="#tools-and-parts-you-need" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[Soldering iron, solder, flux]</li>
-<li>[Multimeter]</li>
-<li>[Supply: voltage and current]</li>
-</ul>
-<h2 id="assembly">Assembly<a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Rev 4.01</label><label for="__tabbed_1_2">Rev 4.02</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>[Assembly steps for Rev 4.01.]</p>
-</div>
-<div class="tabbed-block">
-<p>[Assembly steps for Rev 4.02.]</p>
-</div>
-</div>
-</div>
 <h2 id="wiring">Wiring<a class="headerlink" href="#wiring" title="Permanent link">&para;</a></h2>
 <p>Wire the modules to the controller as shown in
 <a href="connectors/">Connectors and wiring</a>. It has the system diagrams, and a
@@ -724,15 +761,107 @@ pin-out and wiring sketch for every connector.</p>
 <li>LPF module: power (<a href="connectors/#j39-j40-lpf-module-power">J39</a>) and band select (<a href="connectors/#j41-j42-and-j43-j44-lpf-band-select">J43 or J41</a>).</li>
 <li>SWR bridges (<a href="connectors/#j3-j4-and-j5-j6-swr-bridges">J3, J5</a>), NTCs (<a href="connectors/#j28-j29-ntc-temperature-sensors">J28</a>) and fan (<a href="connectors/#j20-j21-fan">J20</a>).</li>
 <li>PTT and RX/TX relay (<a href="connectors/#j26-j27-ptt-and-rxtx-relay">J26</a>), PA bias (<a href="connectors/#j30-j31-pa-bias">J30</a>).</li>
-<li>Radio band data (<a href="connectors/#j1-j2-band-data-and-rf-sense">J1</a> or <a href="connectors/#j16-j17-cat-ci-v">J16</a>), ALC (<a href="connectors/#j24-j25-alc-and-tx-inhibit">J24</a>), and the optional antenna selector and rotator.</li>
+<li>Radio band data (<a href="connectors/#j1-j2-band-data-and-rf-sense">J1</a> or <a href="connectors/#j16-j17-cat-ci-v">J16</a>), ALC and TX inhibit (<a href="connectors/#j24-j25-alc-and-tx-inhibit">J24</a>), and the optional antenna selector (<a href="connectors/#j45-j46-antenna-selector">J45</a>) and rotator (<a href="connectors/#j32-j33-rotator">J32</a>).</li>
 </ol>
 <p><a class="md-button" href="connectors/">Connectors and wiring →</a></p>
 <h2 id="first-power-up">First power-up<a class="headerlink" href="#first-power-up" title="Permanent link">&para;</a></h2>
+<p>Do this with the <strong>PA supply switched off</strong> and <strong>no drive</strong> from the radio.</p>
 <ol>
-<li>[Check supply polarity and voltage before connecting the board.]</li>
-<li>[Power up without the amplifier connected; the display should start.]</li>
-<li>[Continue with Setup and calibration.]</li>
+<li>Before connecting the board, measure the 12 V supply: check its polarity
+   and that it reads 12–14 V.</li>
+<li>Connect the 12 V supply and the display only. The power LED on the
+   controller board lights, and the display shows the HelixRF splash screen,
+   then the main screen.
+   Measure the supply rails at the <a href="#test-points">test points</a>.</li>
+<li>Swipe down to open the menu and tap <strong>Info</strong>. <strong>Controller Firmware</strong>
+   shows a version number when the display and the controller are talking.
+   If it stays at 0, check the display cable (<a href="connectors/#j18-j19-display">J18</a>):
+   the controller's TX must go to the display's RX. See
+   <a href="../troubleshooting/#display-and-controller-not-talking">Display and controller not talking</a>.</li>
+<li>Connect the rest of the wiring (power off while you plug in).</li>
+<li>Power up again and open <strong>Diagnose</strong>. Check that both NTCs give a
+   plausible reading and that nothing reads full scale (4095) with no signal
+   applied. See <a href="../setup/#diagnostics">Diagnostics</a>.</li>
+<li>On the main screen, <strong>press and hold PA ENABLE</strong> until it turns bright
+   green. (The PA supply is still off.)</li>
+<li>Key the radio with its power at zero. <strong>TRANSMIT</strong> lights at the top
+   right and you hear the RX/TX relay change over. Unkey: the relay drops.
+   With PA ENABLE off the relay stays in receive: that is the standby mode.</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Test the relay before connecting the drive</p>
+<p>Check that the relay changes over on PTT with no RF applied, before you
+connect the drive cable.</p>
+</div>
+<h2 id="test-points">Test points<a class="headerlink" href="#test-points" title="Permanent link">&para;</a></h2>
+<p>Seven test pads on the top of the controller board give quick access to
+every supply rail. Measure them with a multimeter against GND (for example
+J22 pin 1). The silkscreen label next to each pad is shown in brackets.</p>
+<figure>
+<p><a href="../assets/images/board-top-test-points.webp"><img alt="Top of the controller board with test points TP1 to TP7 marked" loading="lazy" src="../assets/images/board-top-test-points.webp" /></a>
+  </p>
+<figcaption>Test points on the top of the controller board. Click to enlarge.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Test point</th>
+<th>Rail</th>
+<th>Expected</th>
+<th>Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TP5</strong> (R12v)</td>
+<td>+12 V input, after fuse F1</td>
+<td>Your supply voltage</td>
+<td>Everything below</td>
+</tr>
+<tr>
+<td><strong>TP6</strong> (L12v)</td>
+<td>+12 V, filtered</td>
+<td>Your supply voltage</td>
+<td>LPF and antenna relay drivers, RX/TX relay</td>
+</tr>
+<tr>
+<td><strong>TP4</strong> (F12v)</td>
+<td>+12 V fan, filtered</td>
+<td>Your supply voltage</td>
+<td>Fan connector J20</td>
+</tr>
+<tr>
+<td><strong>TP2</strong> (6v6)</td>
+<td>+6.6 V</td>
+<td>6.6 V</td>
+<td>Buck converter output, feeds the 5 V regulator</td>
+</tr>
+<tr>
+<td><strong>TP1</strong> (5v)</td>
+<td>+5 V</td>
+<td>5.0 V</td>
+<td>Display, CAT, band-data and Neural supplies</td>
+</tr>
+<tr>
+<td><strong>TP3</strong> (3v3)</td>
+<td>+3.3 V</td>
+<td>3.3 V</td>
+<td>Processor, comparators, logic</td>
+</tr>
+<tr>
+<td><strong>TP7</strong> (12v)</td>
+<td>−12 V</td>
+<td>Negative, close to your supply voltage</td>
+<td>ALC switch, pinch-off supply (J30 pin 6)</td>
+</tr>
+</tbody>
+</table>
+<p>If TP5 reads 0 V, check the supply polarity: the input fuse trips when the
+supply is reversed. If TP5 is fine but a lower rail is missing, the stage
+that makes it, or something loading it, is at fault. Disconnect the
+connectors one at a time to find the load.</p>
+<p>Then work through the setup in the order given in
+<a href="../getting-started/">Getting started</a>.</p>
 <p><a class="md-button md-button--primary" href="../setup/">Setup and calibration →</a></p>
 
 
@@ -851,7 +980,7 @@ pin-out and wiring sketch for every connector.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>

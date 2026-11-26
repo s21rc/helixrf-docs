@@ -13,8 +13,10 @@
         <link rel="canonical" href="https://docs.helixrf.com/helixrf-sspa-controller/1.0/firmware/">
       
       
-        <link rel="prev" href="../setup/">
+        <link rel="prev" href="../setup/network/">
       
+      
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -90,7 +92,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-header__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -213,115 +217,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Getting started
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../build/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Build guide
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../setup/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Setup and calibration
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Firmware and release notes
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -335,10 +230,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-nav__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
       
@@ -422,40 +315,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../build/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
     
   
-    Build guide
+    Build and first power-up
   
 
     
@@ -463,30 +331,13 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Build guide
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -511,11 +362,30 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -535,6 +405,60 @@
     
   
     Setup and calibration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/band-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Band data and radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network, display and PSU
   
 
     
@@ -614,10 +538,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-your-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check your versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#updating" class="md-nav__link">
     <span class="md-ellipsis">
       
         Updating
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-the-controller-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering the controller (USB)
       
     </span>
   </a>
@@ -637,10 +611,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xy-date" class="md-nav__link">
+  <a href="#latest-firmware-105" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [x.y] — [date]
+        Latest · firmware 105
       
     </span>
   </a>
@@ -656,6 +630,60 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -687,10 +715,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#check-your-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check your versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#updating" class="md-nav__link">
     <span class="md-ellipsis">
       
         Updating
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-the-controller-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering the controller (USB)
       
     </span>
   </a>
@@ -710,10 +788,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xy-date" class="md-nav__link">
+  <a href="#latest-firmware-105" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [x.y] — [date]
+        Latest · firmware 105
       
     </span>
   </a>
@@ -746,17 +824,128 @@
 
 
 <h1 id="firmware-and-release-notes">Firmware and release notes<a class="headerlink" href="#firmware-and-release-notes" title="Permanent link">&para;</a></h1>
-<p>Firmware updates are free. Download the latest file from
-<a href="https://helixrf.com/my-account/downloads/">your account → Downloads</a>.</p>
+<p>The controller board and the display each have their own firmware, and both
+are updated from the browser app over WiFi. Updates are free. Download the
+latest files from either:</p>
+<ul>
+<li>the <strong>Downloads</strong> section of helixrf.com, or</li>
+<li>the public firmware repository on GitHub:
+  <a href="https://github.com/s21rc/Helixrf-sspa-V4-public">github.com/s21rc/Helixrf-sspa-V4-public</a>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Board</th>
+<th>File</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display</td>
+<td><code>display4-vNNN.bin</code></td>
+<td><code>display4-v105.bin</code></td>
+</tr>
+<tr>
+<td>Controller</td>
+<td><code>controller4-vNNN.bin</code></td>
+<td><code>controller4-v105.bin</code></td>
+</tr>
+<tr>
+<td>Controller, USB recovery only</td>
+<td><code>controller4-vNNN_full.bin</code></td>
+<td><code>controller4-v105_full.bin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Your settings are kept through updates.</p>
+<h2 id="check-your-versions">Check your versions<a class="headerlink" href="#check-your-versions" title="Permanent link">&para;</a></h2>
+<p>Menu → <strong>Info</strong> shows <strong>Display Firmware</strong>, <strong>Controller Firmware</strong>, and the
+remote head and Neural module versions when they are connected.</p>
+<p>The browser app shows the same, and more, under <strong>Info</strong>: the display
+build, the remote head link and pair code, the network (hostname, IP
+address, WiFi network and signal) and the uptime.</p>
+<figure>
+<p><img alt="Browser app Unit information page with firmware, remote head, network and runtime details" loading="lazy" src="../assets/images/web-info.webp" />
+  </p>
+<figcaption>Browser app → Info.</figcaption>
+</figure>
 <h2 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h2>
+<p>You need the display on WiFi with <strong>Enable browser app</strong> ticked (menu →
+<strong>Remote</strong>). See <a href="../setup/network/#wifi">Network</a>.</p>
 <ol>
-<li>[Steps to update the STM32 controller firmware.]</li>
-<li>[Steps to update the ESP32-P4 display firmware.]</li>
+<li>Stop transmitting. The update page refuses to start while the amplifier
+   is keyed.</li>
+<li>On a PC on the same network, open <strong>http://helixrf-sspa4.local/</strong>, open
+   the menu (☰) and choose <strong>Firmware Update</strong>. The top of the page shows the
+   installed versions.</li>
+<li>Update the <strong>display</strong> first, then the <strong>controller</strong>.</li>
+</ol>
+<figure>
+<p><img alt="Browser app Firmware update page with installed versions and the display update section" loading="lazy" src="../assets/images/web-firmware.webp" />
+  </p>
+<figcaption>Browser app → Firmware Update.</figcaption>
+</figure>
+<h3 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Under <strong>Display update</strong>, choose <code>display4-vNNN.bin</code> (or drop it on the
+   box) and click <strong>Upload &amp; install display</strong>.</li>
+<li>Keep the page open until the upload finishes, then click <strong>Reboot now</strong>.</li>
+</ol>
+<p>The new firmware is written to a spare slot; nothing changes until the
+display restarts, and the previous firmware stays as a fallback. If the new
+version misbehaves, the <strong>Restore display4-vNNN</strong> button (it names the
+version it goes back to) switches back and restarts the display.</p>
+<h3 id="controller">Controller<a class="headerlink" href="#controller" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Under <strong>Controller update</strong>, choose <code>controller4-vNNN.bin</code> (not the
+   <code>_full.bin</code>) and click <strong>Upload &amp; flash controller</strong>.</li>
+<li>The amplifier stops for about 15 seconds while the controller is
+   rewritten. The PA is held off and the display shows <strong>FIRMWARE UPDATE ·
+   DO NOT POWER OFF</strong> with a progress bar.</li>
+<li>The controller restarts and the display shows the new version.</li>
+</ol>
+<p>If the update is interrupted (for example by a power cut), the controller
+waits in its bootloader: open the page again and click <strong>Retry flashing</strong>.
+<strong>Restore controller4-vNNN</strong> puts back the version that was installed
+before.</p>
+<h2 id="recovering-the-controller-usb">Recovering the controller (USB)<a class="headerlink" href="#recovering-the-controller-usb" title="Permanent link">&para;</a></h2>
+<p>Needed only if a controller does not start and the browser update cannot
+reach it. You need a PC with
+<a href="https://www.st.com/en/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a>
+and a USB-C cable.</p>
+<ol>
+<li>Switch the 12 V supply on, with the PA supply off.</li>
+<li>On the controller board, hold the <strong>BOOT0</strong> button, press and release
+   <strong>RST</strong>, then release BOOT0. The controller is now in its USB
+   bootloader. The two buttons sit side by side above the processor.</li>
+<li>Connect the PC to the controller's USB-C port (<a href="../build/connectors/#j34-usb-c">J34</a>).</li>
+<li>In STM32CubeProgrammer, choose <strong>USB</strong>, click <strong>Connect</strong>, open
+   <code>controller4-vNNN_full.bin</code> and download it at address <strong>0x08000000</strong>.</li>
+<li>Press <strong>RST</strong>. The controller starts with the new firmware, and later
+   updates work from the browser again.</li>
 </ol>
 <h2 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h2>
-<h3 id="xy-date">[x.y] — [date]<a class="headerlink" href="#xy-date" title="Permanent link">&para;</a></h3>
+<h3 id="latest-firmware-105">Latest · firmware 105<a class="headerlink" href="#latest-firmware-105" title="Permanent link">&para;</a></h3>
+<p>Display and controller firmware 105.</p>
 <ul>
-<li>[Changes in this version.]</li>
+<li>Hardware protection on antenna SWR, LPF SWR, output power, drain voltage,
+  drain current and temperature, plus an external drive-overload input, with
+  first-fault indication.</li>
+<li>RX/TX relay and bias sequencing, with re-arm after faults and power-up.</li>
+<li>SSB-safe peak-hold PEP and SWR, average power, and 3-point power
+  calibration.</li>
+<li>Four meter faces: Power Bar, Needle Meter, Large Digit and Power Scope.</li>
+<li>Automatic band selection by band voltage, BCD, CAT (Yaesu) and CI-V (Icom),
+  with editable per-radio tables, and LPF and antenna maps per band.</li>
+<li>Current sensing for shunt amplifiers, Hall sensors and BTS high-side
+  switches.</li>
+<li>Fan control from two NTCs.</li>
+<li>Antenna rotator with 3-point calibration, 450° support and a GS-232B
+  network server.</li>
+<li>Eltek Flatpack2 and Emerson eSure power supply control over CAN, with a
+  low-voltage preset.</li>
+<li>Browser app, remote head and firmware updates for both boards over WiFi.</li>
 </ul>
 
 
@@ -795,7 +984,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup and calibration">
+          <a href="../setup/network/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Network, display and PSU">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -805,11 +994,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Setup and calibration
+                Network, display and PSU
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -859,7 +1064,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>

@@ -1,0 +1,1354 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Build guide, setup and reference for the Helix SSPA Controller by HelixRF.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.helixrf.com/helixrf-sspa-controller/1.0/using/">
+      
+      
+        <link rel="prev" href="../build/connectors/">
+      
+      
+        <link rel="next" href="../setup/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon-96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Using the controller - Helix SSPA Controller</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/helixrf.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-the-controller" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-header__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
+      
+  <img src="../assets/images/logo-dark-bg.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Helix SSPA Controller
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using the controller
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/s21rc/helixrf-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://helixrf.com" title="Helix SSPA Controller" class="md-nav__button md-logo" aria-label="Helix SSPA Controller" data-md-component="logo">
+      
+  <img src="../assets/images/logo-dark-bg.png" alt="logo">
+
+    </a>
+    Helix SSPA Controller
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/s21rc/helixrf-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and first power-up
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build/connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectors and wiring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the controller
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The main screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The main screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top row
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status chips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meters-and-readouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meters and readouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#band-and-antenna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Band and antenna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meter faces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The menu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-protection-trips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the protection trips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup and calibration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/band-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Band data and radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network, display and PSU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware and release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The main screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The main screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top row
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status chips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meters-and-readouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meters and readouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#band-and-antenna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Band and antenna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meter faces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The menu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-protection-trips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the protection trips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="using-the-controller">Using the controller<a class="headerlink" href="#using-the-controller" title="Permanent link">&para;</a></h1>
+<p>The main screen, the meter faces, the gestures and what happens when the
+protection trips.</p>
+<h2 id="gestures">Gestures<a class="headerlink" href="#gestures" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>On the main screen</th>
+<th>On the menu or a settings page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Swipe <strong>down</strong></td>
+<td>Opens the menu</td>
+<td></td>
+</tr>
+<tr>
+<td>Swipe <strong>up</strong></td>
+<td>Opens Quick Action</td>
+<td>Goes back</td>
+</tr>
+<tr>
+<td>Swipe <strong>left / right</strong></td>
+<td>Next / previous meter face</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Press and hold</strong></td>
+<td>PA ENABLE, PA RESET, AUTO BAND</td>
+<td>+/- buttons repeat in steps of 10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-main-screen">The main screen<a class="headerlink" href="#the-main-screen" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="Main screen, needle meter face" loading="lazy" src="../assets/images/main-needle.webp" />
+  </p>
+<figcaption>Main screen with the needle meter face.</figcaption>
+</figure>
+<h3 id="top-row">Top row<a class="headerlink" href="#top-row" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PA ENABLE</strong></td>
+<td>Press and hold to switch the amplifier between operate (bright green) and standby (dark). In standby the RX/TX relay stays in receive and the radio goes straight through. Refused while transmitting. The setting is remembered across power cycles.</td>
+</tr>
+<tr>
+<td><strong>PA RESET</strong></td>
+<td>Lights red while the protection is latched. Press and hold to clear the latch and reset external modules. Refused while any fault is still present or while transmitting. See <a href="#when-the-protection-trips">When the protection trips</a>.</td>
+</tr>
+<tr>
+<td><strong>Fault indicators</strong></td>
+<td>One per protection input. See the table below.</td>
+</tr>
+<tr>
+<td><strong>TRANSMIT</strong></td>
+<td>Lit while the amplifier is keyed.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Fault indicator</th>
+<th>Trips when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ANT SWR</strong></td>
+<td>SWR at the antenna bridge exceeds 3:1 (2:1 with JP1 bridged)</td>
+</tr>
+<tr>
+<td><strong>LPF SWR</strong></td>
+<td>Reflection between the PA and the LPF is too high: wrong or failed filter</td>
+</tr>
+<tr>
+<td><strong>RF IN</strong></td>
+<td>The external drive-overload input (<a href="../build/connectors/#expansion-and-service-connectors">J14 pin 4</a>) is active</td>
+</tr>
+<tr>
+<td><strong>RF OUT</strong></td>
+<td>Output power exceeds the RV2 setting</td>
+</tr>
+<tr>
+<td><strong>VOLTAGE</strong></td>
+<td>PA supply voltage exceeds the RV3 setting</td>
+</tr>
+<tr>
+<td><strong>CURRENT</strong></td>
+<td>Drain current exceeds the RV4 setting</td>
+</tr>
+<tr>
+<td><strong>TEMP.</strong></td>
+<td>NTC 1 temperature exceeds the RV5 setting</td>
+</tr>
+<tr>
+<td><strong>TIMER</strong></td>
+<td>Reserved for the TX time-out timer</td>
+</tr>
+</tbody>
+</table>
+<p>An indicator is <strong>red</strong> while its fault is present. It turns <strong>amber</strong> when
+the fault has cleared but was the cause of a trip that is still latched, so
+you can see what tripped after the event.</p>
+<h3 id="status-chips">Status chips<a class="headerlink" href="#status-chips" title="Permanent link">&para;</a></h3>
+<p>The small chips at the top right show what is connected.</p>
+<table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>Lit when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CAN</strong></td>
+<td>Traffic on the display's CAN bus (power supply connected)</td>
+</tr>
+<tr>
+<td><strong>ROT</strong></td>
+<td>A rotator program is connected over the network (GS-232B)</td>
+</tr>
+<tr>
+<td><strong>CAT</strong></td>
+<td>The radio is answering on CAT or CI-V</td>
+</tr>
+<tr>
+<td><strong>ALC</strong></td>
+<td>The protection is latched: ALC pulled down and TX inhibit on</td>
+</tr>
+<tr>
+<td><strong>WiFi</strong></td>
+<td>The display is connected to your WiFi</td>
+</tr>
+<tr>
+<td><strong>RMT</strong></td>
+<td>A remote head is connected</td>
+</tr>
+<tr>
+<td><strong>LAN</strong></td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td><strong>USB</strong></td>
+<td>A computer is connected to the display's USB port</td>
+</tr>
+</tbody>
+</table>
+<h3 id="meters-and-readouts">Meters and readouts<a class="headerlink" href="#meters-and-readouts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Power and SWR.</strong> Power is shown as PEP (peak hold) or average; SWR is
+  computed from held envelope peaks, so it stays steady on SSB voice. SWR
+  shows <code>--</code> while receiving. The full scale follows <strong>Power Scale</strong> in
+  <a href="../setup/network/#display">Display settings</a>.</li>
+<li><strong>VOLTAGE / CURRENT.</strong> PA supply voltage and drain current from the High
+  Side Switch.</li>
+<li><strong>TEMP1 / TEMP2 / FAN.</strong> Both NTC temperatures and the fan speed in percent.</li>
+<li><strong>ROTATOR.</strong> Target and current heading, with <strong>&lt;&lt;</strong> and <strong>&gt;&gt;</strong> to turn the
+  rotator while you hold the button. Shown when the rotator widget is on.</li>
+<li><strong>TIME (UTC).</strong> Set from the internet when the display is on WiFi.</li>
+<li><strong>Frequency.</strong> The radio's frequency, when CAT or CI-V is in use.</li>
+</ul>
+<h3 id="band-and-antenna">Band and antenna<a class="headerlink" href="#band-and-antenna" title="Permanent link">&para;</a></h3>
+<p>The <strong>MODE / BAND / TX / RX</strong> panel shows the band selection method (MANUAL,
+BAND-V, BCD, CAT or CI-V), the active band, the TX antenna and the RX
+antenna (<strong>RX ANT</strong> when the dedicated receive antenna is in use).</p>
+<p>The <strong>band buttons</strong> at the bottom select a band by hand. The button lights
+once the controller has switched the LPF and antenna, not before.</p>
+<p><strong>AUTO BAND</strong>: press and hold to switch between automatic band selection
+(from your radio) and manual. Not available while transmitting. In manual,
+the band buttons choose the band; in auto, the radio does. With CAT or CI-V,
+choosing a band on the amplifier also changes the radio's band.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The band never changes while transmitting. A band you tap during TX is
+ignored; a band change reported by the radio during TX is applied the
+moment you unkey.</p>
+</div>
+<h2 id="meter-faces">Meter faces<a class="headerlink" href="#meter-faces" title="Permanent link">&para;</a></h2>
+<p>Swipe left or right to change the face. Choose the face shown at power-up in
+<a href="../setup/network/#display">Display settings</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Needle Meter</label><label for="__tabbed_1_2">Large Digit</label><label for="__tabbed_1_3">Power Bar</label><label for="__tabbed_1_4">Power Scope</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Needle meter face" loading="lazy" src="../assets/images/main-needle.webp" /></p>
+<p>Analog power and SWR meters. <strong>PEP</strong> and <strong>AVG</strong> choose what the power
+needle shows.</p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Large digit face" loading="lazy" src="../assets/images/main-large-digit.webp" /></p>
+<p>Power and SWR in large digits, readable across the room.</p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Power bar face" loading="lazy" src="../assets/images/main-power-bar.webp" /></p>
+<p>Bar graphs for power and SWR. With <strong>PEP hold bar</strong> on, a ghost bar
+marks the recent peak.</p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Power scope face: scrolling forward-power waveform over the last 12 seconds" loading="lazy" src="../assets/images/main-power-scope.webp" /></p>
+<p>A scrolling waveform of the forward power over the last 12 seconds
+(newest on the right), for checking your keying and speech envelope.
+The bars run from yellow at the foot to red at the top of the scale,
+which follows <strong>Power Scale</strong>.</p>
+</div>
+</div>
+</div>
+<p>More faces will be added in later firmware updates.</p>
+<h2 id="quick-action">Quick Action<a class="headerlink" href="#quick-action" title="Permanent link">&para;</a></h2>
+<p>Swipe up on the main screen.</p>
+<figure>
+<p><img alt="Quick Action page with Airplane Mode and Preset Low Volt" loading="lazy" src="../assets/images/quick-action.webp" />
+  </p>
+<figcaption>Quick Action.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AIRPLANE MODE</strong></td>
+<td>Switches the display's WiFi off, and back on. The browser app, remote head and network rotator control stop while it is on. An aeroplane icon shows on the main screen.</td>
+</tr>
+<tr>
+<td><strong>PRESET LOW VOLT</strong></td>
+<td>Drops the power supply to its low-voltage preset (for example for low-power operation or tuning), and back to its default. Needs a <a href="../setup/network/#compatible-power-supplies">compatible power supply</a> on the CAN bus. The PA supply returns to its default after a power cycle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-menu">The menu<a class="headerlink" href="#the-menu" title="Permanent link">&para;</a></h2>
+<p>Swipe down on the main screen. Tap a tile to open the page; swipe up to come
+back.</p>
+<figure>
+<p><img alt="Menu with tiles for every settings page" loading="lazy" src="../assets/images/menu.webp" />
+  </p>
+<figcaption>The menu.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home</td>
+<td>Back to the main screen</td>
+</tr>
+<tr>
+<td>Network</td>
+<td><a href="../setup/network/#wifi">WiFi</a></td>
+</tr>
+<tr>
+<td>Remote</td>
+<td><a href="../setup/network/#remote">Browser app and remote head</a></td>
+</tr>
+<tr>
+<td>RF Calibrate</td>
+<td><a href="../setup/#rf-power-calibration">RF power calibration</a></td>
+</tr>
+<tr>
+<td>Display</td>
+<td><a href="../setup/network/#display">Display settings</a></td>
+</tr>
+<tr>
+<td>Protection</td>
+<td><a href="../setup/#protection">Protection trip levels</a></td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td><a href="../setup/#temperature-and-fan">NTCs and fan</a></td>
+</tr>
+<tr>
+<td>Diagnose</td>
+<td><a href="../setup/#diagnostics">Live readings</a></td>
+</tr>
+<tr>
+<td>LPF Map</td>
+<td><a href="../setup/#lpf-map">Band to LPF bank</a></td>
+</tr>
+<tr>
+<td>Band Data</td>
+<td><a href="../setup/band-data/">Band selection method and radio</a></td>
+</tr>
+<tr>
+<td>Antenna</td>
+<td><a href="../setup/band-data/#antenna-selection">Antenna per band</a></td>
+</tr>
+<tr>
+<td>NeuralNet</td>
+<td>Settings for the HelixRF Neural module</td>
+</tr>
+<tr>
+<td>CAN Bus</td>
+<td><a href="../setup/network/#can-bus-power-supply">Power supply over CAN</a></td>
+</tr>
+<tr>
+<td>Power</td>
+<td><a href="../setup/#power-module-current-sensor">Current sensor</a></td>
+</tr>
+<tr>
+<td>Rotator</td>
+<td><a href="../setup/#rotator">Rotator setup</a></td>
+</tr>
+<tr>
+<td>License</td>
+<td>Licence activation</td>
+</tr>
+<tr>
+<td>Info</td>
+<td><a href="../firmware/#check-your-versions">Firmware versions</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="when-the-protection-trips">When the protection trips<a class="headerlink" href="#when-the-protection-trips" title="Permanent link">&para;</a></h2>
+<p>The comparators trip in nanoseconds and set a hardware latch. The latch,
+without waiting for the processor:</p>
+<ul>
+<li>removes the PA bias and pulls the optional gate-kill line to GND,</li>
+<li>switches the PSU protection lines, so the High Side Switch turns the PA
+  supply off,</li>
+<li>pulls the radio's ALC down and asserts TX inhibit.</li>
+</ul>
+<p>The controller then drops the RX/TX relay and switches PA ENABLE off. The
+fault indicators show which input tripped.</p>
+<p>To recover:</p>
+<ol>
+<li>Unkey the radio.</li>
+<li>Find and fix the cause: check the antenna, the band and LPF, the drive
+   level and the temperatures.</li>
+<li>Wait until no indicator is red (amber is fine).</li>
+<li>Press and hold <strong>PA RESET</strong>. The latch clears, and PA ENABLE returns to
+   what it was before the trip.</li>
+</ol>
+<p>If PA RESET does nothing, a fault is still present: its indicator is red.
+After a reset you have to unkey once before the amplifier keys again, so a
+PTT that was held through the fault never closes the relay into live drive.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../build/connectors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connectors and wiring">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Connectors and wiring
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup and calibration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setup and calibration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © HELIXRF LLC · <a href="https://helixrf.com/privacy-policy/">Privacy</a> · <a href="https://helixrf.com/legal-notice/">Legal notice</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://helixrf.com/shop/" target="_blank" rel="noopener" title="HelixRF shop" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.06 3c-.43 0-.84.14-1.22.42s-.6.64-.7 1.08L2.11 8.91c-.25 1.09-.05 2.04.61 2.86l.28.28V19c0 .5.2 1 .61 1.39S4.5 21 5 21h14c.5 0 1-.2 1.39-.61S21 19.5 21 19v-6.95l.28-.28c.66-.82.86-1.77.61-2.86L20.86 4.5c-.13-.44-.36-.8-.73-1.08A1.88 1.88 0 0 0 18.94 3zm13.83 1.97 1.08 4.41c.09.43 0 .82-.28 1.17-.25.31-.56.45-.94.45-.31 0-.58-.1-.8-.34-.22-.23-.34-.5-.37-.82L16.97 5zM5.06 5h1.97l-.61 4.84C6.3 10.63 5.91 11 5.25 11c-.41 0-.72-.14-.94-.45-.28-.35-.37-.74-.28-1.17zm3.99 0H11v4.7c0 .35-.11.65-.36.92-.25.26-.56.38-.94.38-.34 0-.63-.12-.86-.41S8.5 10 8.5 9.66V9.5zM13 5h1.95l.55 4.5c.08.42 0 .77-.29 1.07-.26.3-.6.43-1.01.43-.31 0-.59-.12-.84-.38A1.3 1.3 0 0 1 13 9.7zm-5.55 7.05c.63.62 1.41.95 2.35.95.84 0 1.58-.33 2.2-.95.69.62 1.45.95 2.3.95.87 0 1.62-.33 2.25-.95.56.62 1.31.95 2.25.95h.23v6H5v-6h.25c.91 0 1.64-.33 2.2-.95"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://helixrf.com/remote-support/" target="_blank" rel="noopener" title="Free remote support" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c-5 0-9 4-9 9v7a3 3 0 0 0 3 3h3v-8H5v-2a7 7 0 0 1 7-7 7 7 0 0 1 7 7v2h-4v8h4v1h-7v2h6a3 3 0 0 0 3-3V10c0-5-4.03-9-9-9"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
