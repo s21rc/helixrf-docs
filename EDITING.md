@@ -18,11 +18,16 @@ helixrf-docs\
 │     └─ docs\
 │        ├─ index.md                  manual home page (block diagram)
 │        ├─ getting-started.md
-│        ├─ build\index.md            build guide
+│        ├─ build\index.md            build and first power-up
 │        ├─ build\connectors.md       connectors and wiring
+│        ├─ using\index.md            main screen, faces, gestures, faults
 │        ├─ setup\index.md            setup and calibration
+│        ├─ setup\band-data.md        band data, radio profiles, antennas
+│        ├─ setup\network.md          WiFi, remote, display, CAN power supply
 │        ├─ firmware\index.md         firmware and release notes
-│        └─ assets\wiring\            images and PDFs for this manual
+│        ├─ reference.md              technical reference and parts count
+│        ├─ assets\images\            display screenshots (.webp)
+│        └─ assets\wiring\            wiring diagrams and PDFs
 ├─ shared\                            text reused by every product (e.g. safety-rf.md)
 ├─ overrides\                         HelixRF colours, fonts, logos (shared look)
 ├─ landing\index.html                 the docs.helixrf.com front page (product cards)

@@ -14,8 +14,7 @@ theme:
   logo: assets/images/logo-dark-bg.png
   favicon: assets/images/favicon-96.png
   features:
-    - navigation.tabs
-    - navigation.sections
+    # One sidebar index for the whole manual (no top tabs).
     - navigation.top
     - navigation.footer
     - navigation.indexes
@@ -68,8 +67,12 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started: getting-started.md
-  - Build guide:
-      - build/index.md
-      - Connectors and wiring: build/connectors.md
+  - Build and first power-up: build/index.md
+  - Connectors and wiring: build/connectors.md
+  - Using the controller: using/index.md
   - Setup and calibration: setup/index.md
+  - Band data and radio: setup/band-data.md
+  - Network, display and PSU: setup/network.md
   - Firmware and release notes: firmware/index.md
+  - Troubleshooting: troubleshooting.md
+  - Technical reference: reference.md
