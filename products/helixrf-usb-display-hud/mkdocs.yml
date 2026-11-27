@@ -35,6 +35,9 @@ theme:
       toggle: { icon: material/weather-night, name: Dark mode }
 
 extra:
+  # Share the palette toggle (and other saved settings) across all products,
+  # versions and the landing page, which reads "/.__palette".
+  scope: /
   version:
     provider: mike
   homepage: https://helixrf.com

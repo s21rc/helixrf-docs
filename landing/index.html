@@ -6,6 +6,14 @@
 <title>HelixRF Documentation</title>
 <meta name="description" content="Manuals, build guides and release notes for HelixRF amateur-radio products.">
 <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
+<script>
+/* MkDocs Material saves the palette toggle as localStorage "<scope>.__palette";
+   the manuals set extra.scope: "/" so the key is "/.__palette". */
+try {
+  var p = JSON.parse(localStorage.getItem("/.__palette"));
+  if (p && p.color && p.color.scheme === "default") document.documentElement.setAttribute("data-scheme", "light");
+} catch (e) {}
+</script>
 <style>
 @font-face { font-family: "Inter"; font-weight: 100 900; font-display: swap; src: url("assets/inter-latin-wght-normal.woff2") format("woff2"); }
 @font-face { font-family: "Space Grotesk"; font-weight: 300 700; font-display: swap; src: url("assets/space-grotesk-latin-wght-normal.woff2") format("woff2"); }
@@ -17,14 +25,16 @@
   --footer: #060D17; --notice-bg: #3A2C10; --notice-fg: #F2C877; --success-bg: #0F3A40; --success-fg: #7FE3EC;
   --grid: #0F1D30; --logo-dark: block; --logo-light: none;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    --base: #FFFFFF; --base-alt: #F3F6FA; --surface: #F7F9FC; --border: #DCE4EC; --border-strong: #D0DBE6;
-    --outline: #B9C8D8; --contrast: #0E1A2E; --heading: #0A1424; --text-2: #4A5D72; --muted: #56697E;
-    --accent: #1F5FA0; --accent-hover: #163F6B; --on-accent: #FFFFFF; --secondary: #9A5A0A;
-    --footer: #0E1A2E; --notice-bg: #FCEFD9; --notice-fg: #8A5208; --success-bg: #DDF3F6; --success-fg: #0B6670;
-    --grid: #EAF0F6; --logo-dark: none; --logo-light: block;
-  }
+/* Dark by default, like helixrf.com and the manuals. No prefers-color-scheme:
+   in-app browsers (Facebook, Messenger, WhatsApp on Android WebView) report
+   "light" regardless of the phone setting. Light only when the reader chose it
+   with the manuals' palette toggle (see the script below). */
+:root[data-scheme="light"] {
+  --base: #FFFFFF; --base-alt: #F3F6FA; --surface: #F7F9FC; --border: #DCE4EC; --border-strong: #D0DBE6;
+  --outline: #B9C8D8; --contrast: #0E1A2E; --heading: #0A1424; --text-2: #4A5D72; --muted: #56697E;
+  --accent: #1F5FA0; --accent-hover: #163F6B; --on-accent: #FFFFFF; --secondary: #9A5A0A;
+  --footer: #0E1A2E; --notice-bg: #FCEFD9; --notice-fg: #8A5208; --success-bg: #DDF3F6; --success-fg: #0B6670;
+  --grid: #EAF0F6; --logo-dark: none; --logo-light: block;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--base); color: var(--contrast); font: 16px/1.6 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
